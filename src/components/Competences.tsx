@@ -30,10 +30,12 @@ function Competences() {
   return (
     <section
       id="competences"
-      className="min-h-screen w-full bg-transparent text-white px-4 sm:px-6 lg:px-16 text-center flex flex-col pt-20"
+      className="min-h-screen w-full bg-transparent text-white px-4 sm:px-6 lg:px-16 text-center flex flex-col pt-20 font-ubuntu"
     >
       <div className="flex-grow flex flex-col justify-center items-center">
-        <AnimatedComponent animationClass="animate-slide-in-up"><h1 className="neon text-4xl text-center mb-10">Mes compétences</h1></AnimatedComponent>
+        <AnimatedComponent animationClass="animate-slide-in-up">
+          <h1 className="neon text-4xl text-center mb-10">Mes compétences</h1>
+        </AnimatedComponent>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
           {skills.map((skill, index) => (
@@ -58,4 +60,3 @@ function Competences() {
 }
 
 export default Competences;
-
