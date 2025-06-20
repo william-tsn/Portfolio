@@ -1,13 +1,14 @@
 {
   "name": "sample",
+  "homepage": "https://william-tsn.github.io/Portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fontsource/inter": "^5.1.1",
