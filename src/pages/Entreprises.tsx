@@ -69,7 +69,7 @@ function Entreprise() {
                         },
                         {
                             nom: "Traduction de 12 000 articles",
-                            description: "Automatisation via l'API ChatGPT pour générer les fiches produits en espagnol et allemand.",
+                            description: "Automatisation via l'API de openai pour générer les fiches produits en espagnol et allemand.",
                             resultats: "Traductions générées efficacement.",
                         },
                         {

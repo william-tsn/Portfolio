@@ -6,7 +6,7 @@ function TableauSynthese() {
     return (
 
         <div className="relative w-full min-h-screen overflow-x-hidden font-ubuntu text-white">
-            <div className="absolute inset-0 bg-gradient-to-b from-red-800 to-black z-[-10]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-red-900 to-black z-[-10]" />
             <div className="absolute inset-0 z-[10] pointer-events-none">
                 <div className="wave25" />
                 <div className="wave26" />
