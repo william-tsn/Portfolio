@@ -1,6 +1,6 @@
 import './App.css';
 import './index.css';
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import Projets from './pages/Projets';
 import VeillesTechnos from './pages/VeillesTechnos';
@@ -10,7 +10,7 @@ import TableauSynthese from "./pages/Synthese";
 
 function App() {
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -19,7 +19,7 @@ function App() {
         <Route path="/entreprises" element={<Entreprises />} />
         <Route path="/tableau-synthese" element={<TableauSynthese />} />
       </Routes>
-    </Router>
+    </>
   );
 }
 
