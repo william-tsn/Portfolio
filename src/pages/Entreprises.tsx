@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import AnimatedComponent from "../components/AnimatedComponent";
 
+
 function Entreprise() {
     return (
         <div className="w-full min-h-screen bg-gradient-to-b from-[#081a3b] to-[#031024] font-ubuntu overflow-x-hidden text-white">
@@ -100,7 +101,7 @@ function Entreprise() {
                     {[
                         {
                             nom: "Magento",
-                            image: "/Portfolio/assets/magento.png",
+                            image: "src/assets/magento.png",
                             desc: "Plateforme e-commerce open source utilisée pour gérer le site et les produits.",
                         },
                         {
