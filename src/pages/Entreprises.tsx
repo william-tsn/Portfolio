@@ -43,8 +43,7 @@ function Entreprise() {
                 <AnimatedComponent animationClass="animate-slide-in-right">
                     <div className="md:w-20/21 max-w-md rounded-xl overflow-hidden shadow-lg">
                         <img
-                            src="src/assets/dreammachine.jpg"
-                            alt="Dream Machine entreprise"
+                            src="../src/assets/dreammachine.jpg"
                             className="object-cover w-full h-full"
                         />
                     </div>
@@ -101,17 +100,17 @@ function Entreprise() {
                     {[
                         {
                             nom: "Magento",
-                            image: "src/assets/magento.png",
+                            image: "../src/assets/magento.png",
                             desc: "Plateforme e-commerce open source utilisée pour gérer le site et les produits.",
                         },
                         {
                             nom: "FileZilla",
-                            image: "src/assets/filezilla.png",
+                            image: "../src/assets/filezilla.png",
                             desc: "Client FTP utilisé pour le transfert de fichiers vers le serveur.",
                         },
                         {
                             nom: "Visual Studio Code",
-                            image: "src/assets/Visual_Studio_Code.png",
+                            image: "../src/assets/Visual_Studio_Code.png",
                             desc: "Éditeur de code principal pour le développement des scripts et la modification du site.",
                         },
                     ].map((outil, index) => (
@@ -143,7 +142,7 @@ function Entreprise() {
                     </a>
                     <div className="mt-12 w-96 h-92 rounded-xl shadow-lg flex items-center justify-center overflow-hidden mx-auto">
                         <img
-                            src="src/assets/dreamlogo.jpg"
+                            src="../src/assets/dreamlogo.jpg"
                             alt="Logo Dream Machine"
                             className="object-contain max-w-full max-h-full"
                         />

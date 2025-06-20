@@ -15,7 +15,7 @@ const projects: Project[] = [
   {
     title: "Projet Pokémon",
     description: "Un Pokédex interactif avec Tailwind/JS et une API Pokémon.",
-    image: "src/assets/pokedex.png",
+    image: "../src/assets/pokedex.png",
     github: "https://github.com/william-tsn/pokedex",
     doc: "https://docs.google.com/document/d/xxx-pokedex",
   },
@@ -23,14 +23,14 @@ const projects: Project[] = [
     title: "book'ing api",
     description:
       "Librairie avec moteur de recherche, comptes, Tailwind, JS, PHP et API Google.",
-    image: "src/assets/bookapi.png",
+    image: "../src/assets/bookapi.png",
     github: "https://github.com/william-tsn/flag-game",
     doc: "https://docs.google.com/document/d/xxx-drapeaux",
   },
   {
     title: "Portfolio",
     description: "Mon site portfolio réalisé en React et Tailwind CSS.",
-    image: "src/assets/portfolio.png",
+    image: "../src/assets/portfolio.png",
     github: "https://github.com/william-tsn/portfolio",
     doc: "https://docs.google.com/document/d/xxx-portfolio",
   },
@@ -38,7 +38,7 @@ const projects: Project[] = [
     title: "Projet Citoyen",
     description:
       "Site web d'un projet citoyen réalisé en HTML, CSS et dans le cadre du BTS SIO. Il sensibilise à l'accessibilité et à l'inclusion des personnes en situation de handicap.",
-    image: "src/assets/projetc.png",
+    image: "../src/assets/projetc.png",
     github: "https://github.com/tony78rip/projetc",
     url: "https://tony78rip.github.io/projetc/",
   },
@@ -46,7 +46,7 @@ const projects: Project[] = [
     title: "Shifumi",
     description:
       "Jeu Pierre-Papier-Ciseaux en HTML, CSS et JS contre l'ordi avec score.",
-    image: "src/assets/shifumi.png",
+    image: "../src/assets/shifumi.png",
     github: "https://github.com/william-tsn/shifumi",
     doc: "https://docs.google.com/document/d/xxx-shifumi",
   },
@@ -54,7 +54,7 @@ const projects: Project[] = [
     title: "AP1 Site vitrine Smarty",
     description:
       "Création d'un site vitrine responsive pour la marque Smarty, incluant des pages produits, un formulaire de contact, et une page de vente. Réalisé en HTML et CSS.",
-    image: "src/assets/site-smarty.png",
+    image: "../src/assets/site-smarty.png",
     github: "https://github.com/william-tsn/Site-vitrine-smarty",
     url: "https://william-tsn.github.io/Site-vitrine-smarty/index.html",
   },
@@ -62,22 +62,22 @@ const projects: Project[] = [
     title: "AP2 Clash of League",
     description:
       "Application de gestion et communication pour les équipes de Clash of League, avec réservation de stades, planning, messagerie et gestion d'équipe.",
-    image: "src/assets/clashofleague.png",
+    image: "../src/assets/clashofleague.png",
     github: "",
-    doc: "src/assets/AP2.pdf",
+    doc: "../src/assets/AP2.pdf",
   },
   {
     title: "AP3 Projet à venir",
     description:
       "Pas encore disponible. Ce projet sera ajouté dès qu'il est finalisé.",
-    image: "src/assets/ap3.png",
+    image: "../src/assets/ap3.png",
     github: "#",
   },
   {
     title: "AP4 Projet à venir",
     description:
       "Pas encore disponible. Ce projet sera ajouté dès qu'il est finalisé.",
-    image: "src/assets/ap4.png",
+    image: "../src/assets/ap4.png",
     github: "#",
   }
 ];

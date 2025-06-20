@@ -8,11 +8,11 @@ const Navbar: React.FC = () => {
   const location = useLocation();
 
   const navItems = [
-    { label: "Accueil", path: "/" },
-    { label: "Projets", path: "/projets" },
-    { label: "Veille Techno", path: "/veilles-technos" },
-    { label: "Entreprise", path: "/entreprises" },
-    { label: "Tableau de synthèse", path: "/tableau-synthese" },
+    { label: "Accueil", path: "../" },
+    { label: "Projets", path: "../projets" },
+    { label: "Veille Techno", path: "../veilles-technos" },
+    { label: "Entreprise", path: "../entreprises" },
+    { label: "Tableau de synthèse", path: "../tableau-synthese" },
   ];
 
   return (
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
           onClick={() => setIsModalOpen(true)}
         >
           <img
-            src="src/assets/pdp.jpeg"
+            src="../src/assets/pdp.jpeg"
             alt="Profil"
             className="w-full h-full object-cover"
           />
@@ -84,7 +84,7 @@ const Navbar: React.FC = () => {
           aria-label="Fermer la vue agrandie"
         >
           <img
-            src="src/assets/pdp.jpeg"
+            src="../src/assets/pdp.jpeg"
             alt="Profil Agrandi"
             className="max-w-[90vw] max-h-[90vh] rounded-lg shadow-lg"
           />
