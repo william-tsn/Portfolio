@@ -23,7 +23,7 @@ div {
 .wave3 {
   position: fixed;
   inset: 0;
-  background: url("assets/wave.png");
+  background: url("/Portfolio/assets/wave.png");
   background-repeat: repeat-x;
   z-index: 2;
   will-change: background-position;
@@ -76,7 +76,7 @@ div {
 .wave6 {
   position: absolute;
   inset: 0;
-  background: url("assets/wave.png");
+  background: url("/Portfolio/assets/wave.png");
   background-repeat: repeat-x;
   transform: rotate(180deg);
   will-change: background-position;
@@ -109,7 +109,7 @@ div {
 .wave9 {
   position: fixed;
   inset: 0;
-  background: url("assets/wave.png");
+  background: url("/Portfolio/assets/wave.png");
   background-repeat: repeat-x;
   z-index: 10;
   background-position-y: 100%;
@@ -143,7 +143,7 @@ div {
 .wave12 {
   position: absolute;
   inset: 0;
-  background: url("assets/wave.png");
+  background: url("/Portfolio/assets/wave.png");
   background-repeat: repeat-x;
   transform: rotate(180deg);
   z-index: 2;
@@ -178,7 +178,7 @@ div {
 .wave15 {
   position: fixed;
   inset: 0;
-  background: url("assets/wave.png");
+  background: url("/Portfolio/assets/wave.png");
   background-repeat: repeat-x;
   z-index: 2;
   background-position-y: 100%;
@@ -212,7 +212,7 @@ div {
 .wave18 {
   position: absolute;
   inset: 0;
-  background: url("assets/wave.png");
+  background: url("/Portfolio/assets/wave.png");
   background-repeat: repeat-x;
   transform: rotate(180deg);
   z-index: 2;
@@ -247,7 +247,7 @@ div {
 .wave21 {
   position: fixed;
   inset: 0;
-  background: url("assets/wave.png");
+  background: url("/Portfolio/assets/wave.png");
   background-repeat: repeat-x;
   z-index: 2;
   background-position-y: 100%;
@@ -281,7 +281,7 @@ div {
 .wave24 {
   position: absolute;
   inset: 0;
-  background: url("assets/wave.png");
+  background: url("/Portfolio/assets/wave.png");
   background-repeat: repeat-x;
   transform: rotate(180deg);
   z-index: 2;
@@ -316,7 +316,7 @@ div {
 .wave27 {
   position: fixed;
   inset: 0;
-  background: url("assets/wave.png");
+  background: url("/Portfolio/assets/wave.png");
   background-repeat: repeat-x;
   z-index: 2;
   background-position-y: 100%;
@@ -350,7 +350,7 @@ div {
 .wave30 {
   position: absolute;
   inset: 0;
-  background: url("assets/wave.png");
+  background: url("/Portfolio/assets/wave.png");
   background-repeat: repeat-x;
   transform: rotate(180deg);
   z-index: 2;
