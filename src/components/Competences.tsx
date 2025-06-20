@@ -7,7 +7,7 @@ const skills = [
   { name: "JavaScript", level: 3, image: "/Portfolio/assets/js.webp" },
   { name: "PHP", level: 3, image: "/Portfolio/assets/php.png" },
   { name: "MySQL", level: 3, image: "/Portfolio/assets/mysql.png" },
-  { name: "React", level: 3, image: "/Portfolio/assets/react.png" },
+  { name: "React", level: 3, image: "/Portfolio/assets/React.png" },
   { name: "Tailwind CSS", level: 4, image: "/Portfolio/assets/Tailwind_CSS.png" },
   { name: "Github", level: 4, image: "/Portfolio/assets/github.png" },
   { name: "VS code", level: 4, image: "/Portfolio/assets/Visual_Studio_Code.png" },
