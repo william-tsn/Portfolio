@@ -13,7 +13,7 @@ const skills = [
   { name: "VS code", level: 4, image: "/Portfolio/assets/Visual_Studio_Code.png" },
   { name: "MCD merise", level: 4, image: "/Portfolio/assets/merise.png" },
   { name: "Magento", level: 4, image: "/Portfolio/assets/magento.png" },
-  { name: "Teams", level: 4, image: "/Portfolio/assets/teams.png" },
+  { name: "Filezilla", level: 4, image: "/Portfolio/assets/filezilla.png" },
   { name: "Trello", level: 4, image: "/Portfolio/assets/trello.png" },
 ];
 
