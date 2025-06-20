@@ -100,7 +100,7 @@ function Entreprise() {
                     {[
                         {
                             nom: "Magento",
-                            image: "src/assets/magento.png",
+                            image: "/Portfolio/assets/magento.png",
                             desc: "Plateforme e-commerce open source utilisée pour gérer le site et les produits.",
                         },
                         {
