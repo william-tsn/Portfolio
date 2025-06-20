@@ -1,0 +1,562 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+
+div {
+  scroll-snap-type: y mandatory;
+}
+
+.wave1,
+.wave2,
+.wave3 {
+  position: fixed;
+  inset: 0;
+  background: url("assets/wave.png");
+  background-repeat: repeat-x;
+  z-index: 2;
+  will-change: background-position;
+  background-position-y: 100%;
+}
+
+.wave1 {
+  animation: wave-50 15s linear infinite;
+  filter: opacity(50%);
+  background-size: 50vw 15vh;
+  animation-delay: 1s;
+  background-position-x: 0;
+}
+
+.wave2 {
+  animation: reverse-wave-50 8.3s linear infinite;
+  filter: opacity(75%);
+  background-size: 50vw 12vh;
+  background-position-x: -50vw;
+}
+
+.wave3 {
+  animation: wave-50 6.9s linear infinite;
+  background-size: 50vw 9vh;
+  background-position-x: 0;
+}
+
+@keyframes wave-50 {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -50vw;
+  }
+}
+
+@keyframes reverse-wave-50 {
+  0% {
+    background-position-x: -50vw;
+  }
+
+  100% {
+    background-position-x: 0;
+  }
+}
+
+.wave4,
+.wave5,
+.wave6 {
+  position: absolute;
+  inset: 0;
+  background: url("assets/wave.png");
+  background-repeat: repeat-x;
+  transform: rotate(180deg);
+  will-change: background-position;
+  background-position-y: 100%;
+}
+
+.wave4 {
+  animation: wave-50 10s linear infinite;
+  filter: opacity(50%);
+  background-size: 50vw 15vh;
+  animation-delay: 1s;
+  background-position-x: 0;
+}
+
+.wave5 {
+  animation: reverse-wave-50 8.3s linear infinite;
+  filter: opacity(75%);
+  background-size: 50vw 12vh;
+  background-position-x: -50vw;
+}
+
+.wave6 {
+  animation: wave-50 6.9s linear infinite;
+  background-size: 50vw 9vh;
+  background-position-x: 0;
+}
+
+.wave7,
+.wave8,
+.wave9 {
+  position: fixed;
+  inset: 0;
+  background: url("assets/wave.png");
+  background-repeat: repeat-x;
+  z-index: 10;
+  background-position-y: 100%;
+  will-change: background-position;
+  background-size: 60vw 16vh;
+}
+
+.wave7 {
+  animation: wave 11s linear infinite;
+  filter: opacity(50%) hue-rotate(-230deg) saturate(4) brightness(1.1);
+  background-position-x: 0;
+  animation-delay: 0.5s;
+}
+
+.wave8 {
+  animation: reverse-wave 9s linear infinite;
+  filter: opacity(75%) hue-rotate(-230deg) saturate(4) brightness(1.1);
+  background-size: 60vw 13vh;
+  background-position-x: -60vw;
+}
+
+.wave9 {
+  animation: wave 7.5s linear infinite;
+  filter: hue-rotate(-230deg) saturate(4) brightness(1.1);
+  background-size: 60vw 10vh;
+  background-position-x: 0;
+}
+
+.wave10,
+.wave11,
+.wave12 {
+  position: absolute;
+  inset: 0;
+  background: url("assets/wave.png");
+  background-repeat: repeat-x;
+  transform: rotate(180deg);
+  z-index: 2;
+  background-position-y: 100%;
+  will-change: background-position;
+  background-size: 60vw 16vh;
+}
+
+.wave10 {
+  animation: wave 11s linear infinite;
+  filter: opacity(50%) hue-rotate(-230deg) saturate(4) brightness(1.1);
+  background-position-x: 0;
+  animation-delay: 0.5s;
+}
+
+.wave11 {
+  animation: reverse-wave 9s linear infinite;
+  filter: opacity(75%) hue-rotate(-230deg) saturate(4) brightness(1.1);
+  background-position-x: -60vw;
+  background-size: 60vw 13vh;
+}
+
+.wave12 {
+  animation: wave 7.5s linear infinite;
+  filter: hue-rotate(-230deg) saturate(4) brightness(1.1);
+  background-position-x: 0;
+  background-size: 60vw 10vh;
+}
+
+.wave13,
+.wave14,
+.wave15 {
+  position: fixed;
+  inset: 0;
+  background: url("assets/wave.png");
+  background-repeat: repeat-x;
+  z-index: 2;
+  background-position-y: 100%;
+  will-change: background-position;
+  background-size: 60vw 16vh;
+}
+
+.wave13 {
+  animation: wave 11s linear infinite;
+  filter: opacity(50%) hue-rotate(170deg) saturate(3.5) brightness(0.5);
+  background-position-x: 0;
+  animation-delay: 0.5s;
+}
+
+.wave14 {
+  animation: reverse-wave 9s linear infinite;
+  filter: opacity(75%) hue-rotate(170deg) saturate(3.5) brightness(0.5);
+  background-position-x: -60vw;
+  background-size: 60vw 13vh;
+}
+
+.wave15 {
+  animation: wave 7.5s linear infinite;
+  filter: hue-rotate(170deg) saturate(3.5) brightness(0.5);
+  background-position-x: 0;
+  background-size: 60vw 10vh;
+}
+
+.wave16,
+.wave17,
+.wave18 {
+  position: absolute;
+  inset: 0;
+  background: url("assets/wave.png");
+  background-repeat: repeat-x;
+  transform: rotate(180deg);
+  z-index: 2;
+  background-position-y: 100%;
+  will-change: background-position;
+  background-size: 60vw 16vh;
+}
+
+.wave16 {
+  animation: wave 11s linear infinite;
+  filter: opacity(50%) hue-rotate(170deg) saturate(3.5) brightness(0.5);
+  background-position-x: 0;
+  animation-delay: 0.5s;
+}
+
+.wave17 {
+  animation: reverse-wave 9s linear infinite;
+  filter: opacity(75%) hue-rotate(170deg) saturate(3.5) brightness(0.5);
+  background-position-x: -60vw;
+  background-size: 60vw 13vh;
+}
+
+.wave18 {
+  animation: wave 7.5s linear infinite;
+  filter: hue-rotate(170deg) saturate(3.5) brightness(0.5);
+  background-position-x: 0;
+  background-size: 60vw 10vh;
+}
+
+.wave19,
+.wave20,
+.wave21 {
+  position: fixed;
+  inset: 0;
+  background: url("assets/wave.png");
+  background-repeat: repeat-x;
+  z-index: 2;
+  background-position-y: 100%;
+  will-change: background-position;
+  background-size: 60vw 16vh;
+}
+
+.wave19 {
+  animation: wave 11s linear infinite;
+  filter: opacity(50%) hue-rotate(320deg) saturate(5) brightness(1);
+  background-position-x: 0;
+  animation-delay: 0.5s;
+}
+
+.wave20 {
+  animation: reverse-wave 9s linear infinite;
+  filter: opacity(75%) hue-rotate(320deg) saturate(5) brightness(1);
+  background-position-x: -60vw;
+  background-size: 60vw 13vh;
+}
+
+.wave21 {
+  animation: wave 7.5s linear infinite;
+  filter: hue-rotate(320deg) saturate(5) brightness(1);
+  background-position-x: 0;
+  background-size: 60vw 10vh;
+}
+
+.wave22,
+.wave23,
+.wave24 {
+  position: absolute;
+  inset: 0;
+  background: url("assets/wave.png");
+  background-repeat: repeat-x;
+  transform: rotate(180deg);
+  z-index: 2;
+  background-position-y: 100%;
+  will-change: background-position;
+  background-size: 60vw 16vh;
+}
+
+.wave22 {
+  animation: wave 11s linear infinite;
+  filter: opacity(50%) hue-rotate(320deg) saturate(5) brightness(1);
+  background-position-x: 0;
+  animation-delay: 0.5s;
+}
+
+.wave23 {
+  animation: reverse-wave 9s linear infinite;
+  filter: opacity(75%) hue-rotate(320deg) saturate(5) brightness(1);
+  background-position-x: -60vw;
+  background-size: 60vw 13vh;
+}
+
+.wave24 {
+  animation: wave 7.5s linear infinite;
+  filter: hue-rotate(320deg) saturate(5) brightness(1);
+  background-position-x: 0;
+  background-size: 60vw 10vh;
+}
+
+.wave25,
+.wave26,
+.wave27 {
+  position: fixed;
+  inset: 0;
+  background: url("assets/wave.png");
+  background-repeat: repeat-x;
+  z-index: 2;
+  background-position-y: 100%;
+  will-change: background-position;
+  background-size: 60vw 16vh;
+}
+
+.wave25 {
+  animation: wave 11s linear infinite;
+  filter: opacity(50%) hue-rotate(110deg) saturate(5) brightness(1);
+  background-position-x: 0;
+  animation-delay: 0.5s;
+}
+
+.wave26 {
+  animation: reverse-wave 9s linear infinite;
+  filter: opacity(75%) hue-rotate(110deg) saturate(5) brightness(1);
+  background-position-x: -60vw;
+  background-size: 60vw 13vh;
+}
+
+.wave27 {
+  animation: wave 7.5s linear infinite;
+  filter: hue-rotate(110deg) saturate(5) brightness(1);
+  background-position-x: 0;
+  background-size: 60vw 10vh;
+}
+
+.wave28,
+.wave29,
+.wave30 {
+  position: absolute;
+  inset: 0;
+  background: url("assets/wave.png");
+  background-repeat: repeat-x;
+  transform: rotate(180deg);
+  z-index: 2;
+  background-position-y: 100%;
+  will-change: background-position;
+  background-size: 60vw 16vh;
+}
+
+.wave28 {
+  animation: wave 11s linear infinite;
+  filter: opacity(50%) hue-rotate(110deg) saturate(5) brightness(1);
+  background-position-x: 0;
+  animation-delay: 0.5s;
+}
+
+.wave29 {
+  animation: reverse-wave 9s linear infinite;
+  filter: opacity(75%) hue-rotate(110deg) saturate(5) brightness(1);
+  background-position-x: -60vw;
+  background-size: 60vw 13vh;
+}
+
+.wave30 {
+  animation: wave 7.5s linear infinite;
+  filter: hue-rotate(110deg) saturate(5) brightness(1);
+  background-position-x: 0;
+  background-size: 60vw 10vh;
+}
+
+@keyframes wave {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -60vw;
+  }
+}
+
+@keyframes reverse-wave {
+  0% {
+    background-position-x: -60vw;
+  }
+
+  100% {
+    background-position-x: 0;
+  }
+}
+
+@keyframes split {
+  0% {
+    letter-spacing: -1.5rem;
+  }
+
+  50% {
+    letter-spacing: 0.5rem;
+  }
+
+  100% {
+    letter-spacing: 0rem;
+  }
+}
+
+.split-effect {
+  font-size: 3em;
+  animation: split 3s ease-in-out;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 3s ease-out forwards;
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(-10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 3s ease-out forwards;
+}
+
+@keyframes slide-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.animate-slide-in-up {
+  animation: slide-in-up 3s ease-out forwards;
+}
+
+@keyframes slide-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.animate-slide-in-down {
+  animation: slide-in-down 3s ease-out forwards;
+}
+
+.neon {
+  text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+.neon-orange {
+  color: #ff8800;
+  text-shadow:
+    0 0 5px #ff8800,
+    0 0 10px #ff8800,
+    0 0 20px #ff8800,
+    0 0 40px #ff8800;
+}
+
+
+@keyframes falling {
+  0% {
+    transform: translateY(-100vh);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.falling {
+  animation: falling 1s ease-in-out forwards;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 8px;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #aaa #1a1a1a;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
