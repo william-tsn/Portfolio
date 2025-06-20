@@ -10,7 +10,7 @@ import TableauSynthese from "./pages/Synthese";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Portfolio">
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
