@@ -118,6 +118,8 @@ function Projets() {
                 <img
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-40 object-cover"
                 />
                 <div className="p-4 flex flex-col justify-between h-40">
@@ -145,6 +147,8 @@ function Projets() {
             <img
               src={selectedProject.image}
               alt={selectedProject.title}
+              loading="lazy"
+              decoding="async"
               className="w-full h-auto rounded-md mb-4 object-contain"
             />
             <h3 className="text-yellow-300 text-2xl mb-2">
