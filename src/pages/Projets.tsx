@@ -110,7 +110,7 @@ function Projets() {
             <AnimatedComponent animationClass="animate-slide-in-up">
               <div
                 onClick={() => setSelectedProject(project)}
-                className="relative block bg-[#ff6f3c]/10 backdrop-blur-md border border-orange-400 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:z-10 hover:shadow-[0_0_25px_#ff944d] cursor-pointer"
+                className="relative block bg-[#ff6f3c]/10 backdrop-blur-md border border-orange-400 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 md:hover:scale-105 md:hover:z-10 md:hover:shadow-[0_0_25px_#ff944d] cursor-pointer"
               >
                 <img
                   src={project.image}
