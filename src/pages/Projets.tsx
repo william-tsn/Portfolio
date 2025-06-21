@@ -24,14 +24,15 @@ const projects: Project[] = [
     description:
       "Librairie avec moteur de recherche, comptes, Tailwind, JS, PHP et API Google.",
     image: "/Portfolio/assets/bookapi.webp",
-    github: "https://github.com/william-tsn/book-api",
+    github: "https://github.com/william-tsn/flag-game",
+    doc: "https://docs.google.com/document/d/xxx-drapeaux",
   },
   {
     title: "Portfolio",
     description: "Mon site portfolio réalisé en React et Tailwind CSS.",
     image: "/Portfolio/assets/portfolio.webp",
-    github: "https://github.com/william-tsn/Portfolio",
-    url: "https://william-tsn.github.io/Portfolio/",
+    github: "https://github.com/william-tsn/portfolio",
+    doc: "https://docs.google.com/document/d/xxx-portfolio",
   },
   {
     title: "Projet Citoyen",
@@ -70,14 +71,14 @@ const projects: Project[] = [
     description:
       "Pas encore disponible. Ce projet sera ajouté dès qu'il est finalisé.",
     image: "/Portfolio/assets/notfound.webp",
-    github: "",
+    github: "#",
   },
   {
     title: "AP4 Projet à venir",
     description:
       "Pas encore disponible. Ce projet sera ajouté dès qu'il est finalisé.",
     image: "/Portfolio/assets/notfound.webp",
-    github: "",
+    github: "#",
   }
 ];
 
