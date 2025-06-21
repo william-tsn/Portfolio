@@ -110,12 +110,13 @@ function Projets() {
             <AnimatedComponent animationClass="animate-slide-in-up" key={index}>
               <div
                 onClick={() => window.innerWidth >= 768 && setSelectedProject(project)}
-                className="relative block bg-[#ff6f3c]/10 backdrop-blur-md border border-orange-400 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 md:hover:z-10 md:hover:shadow-[0_0_25px_#ff944d] cursor-pointer"
+                className="relative block bg-[#ff6f3c]/10 md:backdrop-blur-md border border-orange-400 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 md:hover:z-10 md:hover:shadow-[0_0_25px_#ff944d] cursor-pointer"
               >
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-40 object-cover"
+                  loading="lazy"
                 />
                 <div className="p-4 flex flex-col justify-between h-fit">
                   <h3 className="text-orange-300 text-lg mb-2">{project.title}</h3>
