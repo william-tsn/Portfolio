@@ -40,7 +40,7 @@ function Accueil() {
 
             <a
               download
-              href="../tousson-william-cv.pdf"
+              href="/Portfolio/assets/tousson-william-cv.pdf"
               className="inline-block px-6 py-2 border-2 border-purple-400 text-purple-400 rounded-lg hover:bg-purple-400 hover:text-black transition mt-4"
             >
               MON CV
