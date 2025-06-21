@@ -86,8 +86,7 @@ function Projets() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <div className="relative w-full min-h-screen overflow-x-hidden font-ubuntu text-white pb-40">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#2c1c0b] to-black z-[-10]" />
+    <div className="relative w-full min-h-full overflow-x-hidden font-ubuntu text-white pb-40 bg-gradient-to-b from-[#2c1c0b] to-black">
       <div className="absolute inset-0 z-[10] pointer-events-none">
         <div className="wave7" />
         <div className="wave8" />
