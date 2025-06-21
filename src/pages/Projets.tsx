@@ -86,7 +86,8 @@ function Projets() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <div className="relative w-full min-h-full overflow-x-hidden font-ubuntu text-white pb-40 bg-gradient-to-b from-[#2c1c0b] to-black">
+    <div className="relative w-full min-h-screen overflow-x-hidden font-ubuntu text-white pb-40">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#2c1c0b] to-black z-[-10]" />
       <div className="absolute inset-0 z-[10] pointer-events-none">
         <div className="wave7" />
         <div className="wave8" />
@@ -104,55 +105,29 @@ function Projets() {
           </h1>
         </AnimatedComponent>
       </section>
-
       <section className="w-full px-10 pb-24">
         <div className="grid gap-8 md:grid-cols-3 relative z-5">
-          {projects.map((project, index) => (
-            <AnimatedComponent animationClass="animate-slide-in-up" key={index}>
+          {projects.map((project, idx) => (
+            <AnimatedComponent
+              key={idx}
+              animationClass="animate-slide-in-up"
+            >
               <div
-                onClick={() => window.innerWidth >= 768 && setSelectedProject(project)}
-                className="relative block bg-[#ff6f3c]/10 backdrop-blur-md border border-orange-400 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 md:hover:z-10 md:hover:shadow-[0_0_25px_#ff944d] cursor-pointer"
+                onClick={() => setSelectedProject(project)}
+                className="relative block bg-[#ff6f3c]/10 backdrop-blur-md border border-orange-400 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:z-10 hover:shadow-[0_0_25px_#ff944d] cursor-pointer"
               >
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-40 object-cover"
                 />
-                <div className="p-4 flex flex-col justify-between h-fit">
-                  <h3 className="text-orange-300 text-lg mb-2">{project.title}</h3>
-                  <p className="text-sm text-orange-200 mb-3">{project.description}</p>
-                  <div className="flex flex-col gap-1 md:hidden text-sm">
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-orange-400 hover:text-orange-300 underline"
-                      >
-                        GitHub →
-                      </a>
-                    )}
-                    {project.doc && (
-                      <a
-                        href={project.doc}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-orange-400 hover:text-orange-300 underline"
-                      >
-                        Documentation →
-                      </a>
-                    )}
-                    {project.url && (
-                      <a
-                        href={project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-orange-400 hover:text-orange-300 underline"
-                      >
-                        Voir le site →
-                      </a>
-                    )}
-                  </div>
+                <div className="p-4 flex flex-col justify-between h-40">
+                  <h3 className="text-orange-300 text-lg mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm text-orange-200 mb-3">
+                    {project.description}
+                  </p>
                 </div>
               </div>
             </AnimatedComponent>
@@ -161,7 +136,7 @@ function Projets() {
       </section>
       {selectedProject && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-6 z-50 overflow-auto modal-fade-in"
+          className="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center p-6 z-50 overflow-auto"
           onClick={() => setSelectedProject(null)}
         >
           <div
@@ -171,22 +146,21 @@ function Projets() {
             <img
               src={selectedProject.image}
               alt={selectedProject.title}
-              loading="lazy"
-              className="max-w-full max-h-[60vh] object-contain rounded-md mb-4"
+              className="w-full h-auto rounded-md mb-4 object-contain"
             />
-            <h3 className="text-yellow-300 text-2xl mb-2">{selectedProject.title}</h3>
+            <h3 className="text-yellow-300 text-2xl mb-2">
+              {selectedProject.title}
+            </h3>
             <p className="text-orange-200 mb-4">{selectedProject.description}</p>
             <div className="flex flex-col gap-2">
-              {selectedProject.github && (
-                <a
-                  href={selectedProject.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-orange-400 hover:text-orange-300 underline"
-                >
-                  Voir sur GitHub →
-                </a>
-              )}
+              <a
+                href={selectedProject.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange-400 hover:text-orange-300 underline"
+              >
+                Voir sur GitHub →
+              </a>
               {selectedProject.doc && (
                 <a
                   href={selectedProject.doc}
