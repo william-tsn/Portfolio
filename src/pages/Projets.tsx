@@ -24,15 +24,14 @@ const projects: Project[] = [
     description:
       "Librairie avec moteur de recherche, comptes, Tailwind, JS, PHP et API Google.",
     image: "/Portfolio/assets/bookapi.webp",
-    github: "https://github.com/william-tsn/flag-game",
-    doc: "https://docs.google.com/document/d/xxx-drapeaux",
+    github: "https://github.com/william-tsn/book-api",
   },
   {
     title: "Portfolio",
     description: "Mon site portfolio réalisé en React et Tailwind CSS.",
     image: "/Portfolio/assets/portfolio.webp",
-    github: "https://github.com/william-tsn/portfolio",
-    doc: "https://docs.google.com/document/d/xxx-portfolio",
+    github: "https://github.com/william-tsn/Portfolio",
+    url: "https://william-tsn.github.io/Portfolio/",
   },
   {
     title: "Projet Citoyen",
@@ -71,14 +70,14 @@ const projects: Project[] = [
     description:
       "Pas encore disponible. Ce projet sera ajouté dès qu'il est finalisé.",
     image: "/Portfolio/assets/notfound.webp",
-    github: "#",
+    github: "",
   },
   {
     title: "AP4 Projet à venir",
     description:
       "Pas encore disponible. Ce projet sera ajouté dès qu'il est finalisé.",
     image: "/Portfolio/assets/notfound.webp",
-    github: "#",
+    github: "",
   }
 ];
 
@@ -104,56 +103,64 @@ function Projets() {
           </h1>
         </AnimatedComponent>
       </section>
-      <section className="w-full px-6 md:px-10 pb-24">
-        <div className="hidden md:grid gap-8 grid-cols-3 relative z-5">
-          {projects.map((project) => (
-            <AnimatedComponent key={project.title} animationClass="animate-slide-in-up">
+
+      <section className="w-full px-10 pb-24">
+        <div className="grid gap-8 md:grid-cols-3 relative z-5">
+          {projects.map((project, index) => (
+            <AnimatedComponent animationClass="animate-slide-in-up" key={index}>
               <div
-                onClick={() => setSelectedProject(project)}
-                className="relative block bg-[#ff6f3c]/10 backdrop-blur-md border border-orange-400 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:z-10 hover:shadow-[0_0_25px_#ff944d] cursor-pointer"
+                onClick={() => window.innerWidth >= 768 && setSelectedProject(project)}
+                className="relative block bg-[#ff6f3c]/10 backdrop-blur-md border border-orange-400 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 md:hover:z-10 md:hover:shadow-[0_0_25px_#ff944d] cursor-pointer"
               >
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-40 object-cover"
-                  loading="lazy"
                 />
-                <div className="p-4 flex flex-col justify-between h-40">
+                <div className="p-4 flex flex-col justify-between h-fit">
                   <h3 className="text-orange-300 text-lg mb-2">{project.title}</h3>
                   <p className="text-sm text-orange-200 mb-3">{project.description}</p>
+                  <div className="flex flex-col gap-1 md:hidden text-sm">
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-orange-400 hover:text-orange-300 underline"
+                      >
+                        GitHub →
+                      </a>
+                    )}
+                    {project.doc && (
+                      <a
+                        href={project.doc}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-orange-400 hover:text-orange-300 underline"
+                      >
+                        Documentation →
+                      </a>
+                    )}
+                    {project.url && (
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-orange-400 hover:text-orange-300 underline"
+                      >
+                        Voir le site →
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </AnimatedComponent>
           ))}
         </div>
-        <div className="md:hidden flex flex-col gap-4 relative z-5 px-2">
-          {projects.map((project) => (
-            <div
-              key={project.title + "-mobile"}
-              onClick={() => setSelectedProject(project)}
-              className="flex items-center bg-[#ff6f3c]/20 backdrop-blur-sm border border-orange-400 rounded-lg overflow-hidden transition-all duration-300 cursor-pointer hover:shadow-[0_0_15px_#ff944d]"
-            >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-24 h-24 object-cover flex-shrink-0"
-                loading="lazy"
-              />
-              <div className="p-3 flex flex-col justify-center flex-1">
-                <h3 className="text-orange-300 text-base font-semibold truncate">
-                  {project.title}
-                </h3>
-                <p className="text-orange-200 text-xs line-clamp-2 mt-1">
-                  {project.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
       </section>
       {selectedProject && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center p-6 z-50 overflow-auto"
+          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-6 z-50 overflow-auto modal-fade-in"
           onClick={() => setSelectedProject(null)}
         >
           <div
@@ -163,20 +170,22 @@ function Projets() {
             <img
               src={selectedProject.image}
               alt={selectedProject.title}
-              className="w-full h-auto rounded-md mb-4 object-contain"
               loading="lazy"
+              className="max-w-full max-h-[60vh] object-contain rounded-md mb-4"
             />
             <h3 className="text-yellow-300 text-2xl mb-2">{selectedProject.title}</h3>
             <p className="text-orange-200 mb-4">{selectedProject.description}</p>
             <div className="flex flex-col gap-2">
-              <a
-                href={selectedProject.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange-400 hover:text-orange-300 underline"
-              >
-                Voir sur GitHub →
-              </a>
+              {selectedProject.github && (
+                <a
+                  href={selectedProject.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-orange-400 hover:text-orange-300 underline"
+                >
+                  Voir sur GitHub →
+                </a>
+              )}
               {selectedProject.doc && (
                 <a
                   href={selectedProject.doc}
