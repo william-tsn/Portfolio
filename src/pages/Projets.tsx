@@ -12,6 +12,7 @@ type Project = {
 };
 
 const projects: Project[] = [
+  
   {
     title: "Projet Pokémon",
     description: "Un Pokédex interactif avec Tailwind/JS et une API Pokémon.",
@@ -128,27 +129,26 @@ function Projets() {
         </div>
         <div className="md:hidden flex flex-col gap-4 relative z-5 px-2">
           {projects.map((project) => (
-            <AnimatedComponent key={project.title + "-mobile"} animationClass="animate-slide-in-up">
-              <div
-                onClick={() => setSelectedProject(project)}
-                className="flex items-center bg-[#ff6f3c]/20 backdrop-blur-sm border border-orange-400 rounded-lg overflow-hidden transition-all duration-300 cursor-pointer hover:shadow-[0_0_15px_#ff944d]"
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-24 h-24 object-cover flex-shrink-0"
-                  loading="lazy"
-                />
-                <div className="p-3 flex flex-col justify-center flex-1">
-                  <h3 className="text-orange-300 text-base font-semibold truncate">
-                    {project.title}
-                  </h3>
-                  <p className="text-orange-200 text-xs line-clamp-2 mt-1">
-                    {project.description}
-                  </p>
-                </div>
+            <div
+              key={project.title + "-mobile"}
+              onClick={() => setSelectedProject(project)}
+              className="flex items-center bg-[#ff6f3c]/20 backdrop-blur-sm border border-orange-400 rounded-lg overflow-hidden transition-all duration-300 cursor-pointer hover:shadow-[0_0_15px_#ff944d]"
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-24 h-24 object-cover flex-shrink-0"
+                loading="lazy"
+              />
+              <div className="p-3 flex flex-col justify-center flex-1">
+                <h3 className="text-orange-300 text-base font-semibold truncate">
+                  {project.title}
+                </h3>
+                <p className="text-orange-200 text-xs line-clamp-2 mt-1">
+                  {project.description}
+                </p>
               </div>
-            </AnimatedComponent>
+            </div>
           ))}
         </div>
       </section>
