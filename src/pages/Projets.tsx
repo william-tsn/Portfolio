@@ -82,6 +82,27 @@ const projects: Project[] = [
   }
 ];
 
+function ProjectCard({ project, onClick }: { project: Project; onClick: () => void }) {
+  return (
+    <AnimatedComponent animationClass="animate-slide-in-up" key={project.title}>
+      <div
+        onClick={onClick}
+        className="relative block bg-[#ff6f3c]/10 backdrop-blur-md border border-orange-400 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:z-10 hover:shadow-[0_0_25px_#ff944d] cursor-pointer"
+      >
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-40 object-cover"
+        />
+        <div className="p-4 flex flex-col justify-between h-40">
+          <h3 className="text-orange-300 text-lg mb-2">{project.title}</h3>
+          <p className="text-sm text-orange-200 mb-3">{project.description}</p>
+        </div>
+      </div>
+    </AnimatedComponent>
+  );
+}
+
 function Projets() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
@@ -97,6 +118,7 @@ function Projets() {
       </div>
 
       <Navbar />
+
       <section className="flex flex-col items-center justify-center min-h-screen px-4 text-center space-y-6 text-white">
         <AnimatedComponent animationClass="animate-slide-in-up">
           <h1 className="text-4xl md:text-5xl">
@@ -104,32 +126,19 @@ function Projets() {
           </h1>
         </AnimatedComponent>
       </section>
+
       <section className="w-full px-10 pb-24">
-        <div className="grid gap-8 md:grid-cols-3 relative z-5">
+        <div className="grid gap-8 md:grid-cols-3">
           {projects.map((project) => (
-            <AnimatedComponent animationClass="animate-slide-in-up">
-              <div
-                onClick={() => setSelectedProject(project)}
-                className="relative block bg-[#ff6f3c]/10 backdrop-blur-md border border-orange-400 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:z-10 hover:shadow-[0_0_25px_#ff944d] cursor-pointer"
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-40 object-cover"
-                />
-                <div className="p-4 flex flex-col justify-between h-40">
-                  <h3 className="text-orange-300 text-lg mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-orange-200 mb-3">
-                    {project.description}
-                  </p>
-                </div>
-              </div>
-            </AnimatedComponent>
+            <ProjectCard
+              key={project.title}
+              project={project}
+              onClick={() => setSelectedProject(project)}
+            />
           ))}
         </div>
       </section>
+
       {selectedProject && (
         <div
           className="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center p-6 z-50 overflow-auto"
@@ -144,9 +153,7 @@ function Projets() {
               alt={selectedProject.title}
               className="w-full h-auto rounded-md mb-4 object-contain"
             />
-            <h3 className="text-yellow-300 text-2xl mb-2">
-              {selectedProject.title}
-            </h3>
+            <h3 className="text-yellow-300 text-2xl mb-2">{selectedProject.title}</h3>
             <p className="text-orange-200 mb-4">{selectedProject.description}</p>
             <div className="flex flex-col gap-2">
               <a
