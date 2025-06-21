@@ -106,11 +106,8 @@ function Projets() {
       </section>
       <section className="w-full px-10 pb-24">
         <div className="grid gap-8 md:grid-cols-3 relative z-5">
-          {projects.map((project, idx) => (
-            <AnimatedComponent
-              key={idx}
-              animationClass="animate-slide-in-up"
-            >
+          {projects.map((project) => (
+            <AnimatedComponent animationClass="animate-slide-in-up">
               <div
                 onClick={() => setSelectedProject(project)}
                 className="relative block bg-[#ff6f3c]/10 backdrop-blur-md border border-orange-400 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:z-10 hover:shadow-[0_0_25px_#ff944d] cursor-pointer"
@@ -118,8 +115,6 @@ function Projets() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  loading="lazy"
-                  decoding="async"
                   className="w-full h-40 object-cover"
                 />
                 <div className="p-4 flex flex-col justify-between h-40">
@@ -147,8 +142,6 @@ function Projets() {
             <img
               src={selectedProject.image}
               alt={selectedProject.title}
-              loading="lazy"
-              decoding="async"
               className="w-full h-auto rounded-md mb-4 object-contain"
             />
             <h3 className="text-yellow-300 text-2xl mb-2">
