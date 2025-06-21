@@ -6,7 +6,6 @@ type Project = {
   title: string;
   description: string;
   image: string;
-  imageSmall: string;
   github: string;
   doc?: string;
   url?: string;
@@ -17,7 +16,6 @@ const projects: Project[] = [
     title: "Projet Pokémon",
     description: "Un Pokédex interactif avec Tailwind/JS et une API Pokémon.",
     image: "/Portfolio/assets/pokedex.webp",
-    imageSmall: "/Portfolio/assets/pokedex-small.webp",
     github: "https://github.com/william-tsn/pokedex",
     doc: "https://docs.google.com/document/d/xxx-pokedex",
   },
@@ -26,7 +24,6 @@ const projects: Project[] = [
     description:
       "Librairie avec moteur de recherche, comptes, Tailwind, JS, PHP et API Google.",
     image: "/Portfolio/assets/bookapi.webp",
-    imageSmall: "/Portfolio/assets/bookapi-small.webp",
     github: "https://github.com/william-tsn/flag-game",
     doc: "https://docs.google.com/document/d/xxx-drapeaux",
   },
@@ -34,7 +31,6 @@ const projects: Project[] = [
     title: "Portfolio",
     description: "Mon site portfolio réalisé en React et Tailwind CSS.",
     image: "/Portfolio/assets/portfolio.webp",
-    imageSmall: "/Portfolio/assets/portfolio-small.webp",
     github: "https://github.com/william-tsn/portfolio",
     doc: "https://docs.google.com/document/d/xxx-portfolio",
   },
@@ -43,7 +39,6 @@ const projects: Project[] = [
     description:
       "Site web d'un projet citoyen réalisé en HTML, CSS et dans le cadre du BTS SIO. Il sensibilise à l'accessibilité et à l'inclusion des personnes en situation de handicap.",
     image: "/Portfolio/assets/projetc.webp",
-    imageSmall: "/Portfolio/assets/projetc-small.webp",
     github: "https://github.com/tony78rip/projetc",
     url: "https://tony78rip.github.io/projetc/",
   },
@@ -52,7 +47,6 @@ const projects: Project[] = [
     description:
       "Jeu Pierre-Papier-Ciseaux en HTML, CSS et JS contre l'ordi avec score.",
     image: "/Portfolio/assets/shifumi.webp",
-    imageSmall: "/Portfolio/assets/shifumi-small.webp",
     github: "https://github.com/william-tsn/shifumi",
     doc: "https://docs.google.com/document/d/xxx-shifumi",
   },
@@ -61,7 +55,6 @@ const projects: Project[] = [
     description:
       "Création d'un site vitrine responsive pour la marque Smarty, incluant des pages produits, un formulaire de contact, et une page de vente. Réalisé en HTML et CSS.",
     image: "/Portfolio/assets/site-smarty.webp",
-    imageSmall: "/Portfolio/assets/site-smarty-small.webp",
     github: "https://github.com/william-tsn/Site-vitrine-smarty",
     url: "https://william-tsn.github.io/Site-vitrine-smarty/index.html",
   },
@@ -70,7 +63,6 @@ const projects: Project[] = [
     description:
       "Application de gestion et communication pour les équipes de Clash of League, avec réservation de stades, planning, messagerie et gestion d'équipe.",
     image: "/Portfolio/assets/clashofleague.webp",
-    imageSmall: "/Portfolio/assets/clashofleague-small.webp",
     github: "",
     doc: "/Portfolio/assets/AP2.pdf",
   },
@@ -79,7 +71,6 @@ const projects: Project[] = [
     description:
       "Pas encore disponible. Ce projet sera ajouté dès qu'il est finalisé.",
     image: "/Portfolio/assets/notfound.webp",
-    imageSmall: "/Portfolio/assets/notfound-small.webp",
     github: "#",
   },
   {
@@ -87,7 +78,6 @@ const projects: Project[] = [
     description:
       "Pas encore disponible. Ce projet sera ajouté dès qu'il est finalisé.",
     image: "/Portfolio/assets/notfound.webp",
-    imageSmall: "/Portfolio/assets/notfound-small.webp",
     github: "#",
   }
 ];
@@ -115,31 +105,45 @@ function Projets() {
         </AnimatedComponent>
       </section>
       <section className="w-full px-6 md:px-10 pb-24">
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-3 relative z-5">
+        <div className="hidden md:grid gap-8 grid-cols-3 relative z-5">
           {projects.map((project) => (
             <AnimatedComponent key={project.title} animationClass="animate-slide-in-up">
               <div
                 onClick={() => setSelectedProject(project)}
                 className="relative block bg-[#ff6f3c]/10 backdrop-blur-md border border-orange-400 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:z-10 hover:shadow-[0_0_25px_#ff944d] cursor-pointer"
               >
-                <picture>
-                  <source
-                    srcSet={project.imageSmall}
-                    media="(max-width: 768px)"
-                    type="image/webp"
-                  />
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-28 md:h-40 object-cover"
-                    loading="lazy"
-                  />
-                </picture>
-                <div className="p-3 md:p-4 flex flex-col justify-between h-28 md:h-40">
-                  <h3 className="text-orange-300 text-lg mb-1 truncate">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-40 object-cover"
+                  loading="lazy"
+                />
+                <div className="p-4 flex flex-col justify-between h-40">
+                  <h3 className="text-orange-300 text-lg mb-2">{project.title}</h3>
+                  <p className="text-sm text-orange-200 mb-3">{project.description}</p>
+                </div>
+              </div>
+            </AnimatedComponent>
+          ))}
+        </div>
+        <div className="md:hidden flex flex-col gap-4 relative z-5 px-2">
+          {projects.map((project) => (
+            <AnimatedComponent key={project.title + "-mobile"} animationClass="animate-slide-in-up">
+              <div
+                onClick={() => setSelectedProject(project)}
+                className="flex items-center bg-[#ff6f3c]/20 backdrop-blur-sm border border-orange-400 rounded-lg overflow-hidden transition-all duration-300 cursor-pointer hover:shadow-[0_0_15px_#ff944d]"
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-24 h-24 object-cover flex-shrink-0"
+                  loading="lazy"
+                />
+                <div className="p-3 flex flex-col justify-center flex-1">
+                  <h3 className="text-orange-300 text-base font-semibold truncate">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-orange-200 line-clamp-2 md:line-clamp-none">
+                  <p className="text-orange-200 text-xs line-clamp-2 mt-1">
                     {project.description}
                   </p>
                 </div>
@@ -164,9 +168,7 @@ function Projets() {
               className="w-full h-auto rounded-md mb-4 object-contain"
               loading="lazy"
             />
-            <h3 className="text-yellow-300 text-2xl mb-2">
-              {selectedProject.title}
-            </h3>
+            <h3 className="text-yellow-300 text-2xl mb-2">{selectedProject.title}</h3>
             <p className="text-orange-200 mb-4">{selectedProject.description}</p>
             <div className="flex flex-col gap-2">
               <a
