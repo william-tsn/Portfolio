@@ -12,7 +12,6 @@ type Project = {
 };
 
 const projects: Project[] = [
-  
   {
     title: "Projet Pokémon",
     description: "Un Pokédex interactif avec Tailwind/JS et une API Pokémon.",
@@ -152,7 +151,6 @@ function Projets() {
           ))}
         </div>
       </section>
-
       {selectedProject && (
         <div
           className="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center p-6 z-50 overflow-auto"
