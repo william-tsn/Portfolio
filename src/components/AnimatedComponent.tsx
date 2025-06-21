@@ -4,17 +4,34 @@ interface AnimatedComponentProps {
   children: ReactNode;
   animationClass?: 'animate-slide-in' | 'animate-slide-in-right' | 'animate-slide-in-up' | 'animate-slide-in-down' | 'split-effect' | 'falling';
   threshold?: number;
+  disableOnMobile?: boolean;
 }
 
 const AnimatedComponent: React.FC<AnimatedComponentProps> = ({
   children,
   animationClass = 'animate-slide-in',
   threshold = 0.7,
+  disableOnMobile = false,
 }) => {
   const [isInView, setIsInView] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const elementRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    function checkMobile() {
+      setIsMobile(window.innerWidth < 768);
+    }
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (disableOnMobile && isMobile) {
+      setIsInView(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -35,7 +52,7 @@ const AnimatedComponent: React.FC<AnimatedComponentProps> = ({
         observer.unobserve(elementRef.current);
       }
     };
-  }, [threshold]);
+  }, [threshold, disableOnMobile, isMobile]);
 
   return (
     <div
