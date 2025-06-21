@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
         </button>
 
         <div
-          className={`fixed top-0 right-0 h-full w-[70%] bg-black/90 text-white flex flex-col items-center justify-center space-y-6 text-2xl transition-transform duration-500 ${isOpen ? "translate-x-0" : "translate-x-full"
+          className={`fixed top-[100px] right-0 h-[calc(100vh-100px)] w-[70%] bg-black/90 text-white flex flex-col items-center justify-center space-y-6 text-2xl transition-transform duration-500 ${isOpen ? "translate-x-0" : "translate-x-full"
             } md:hidden`}
         >
           {navItems.map(({ label, path }, index) => {
