@@ -70,14 +70,14 @@ const projects: Project[] = [
     title: "AP3 Projet à venir",
     description:
       "Pas encore disponible. Ce projet sera ajouté dès qu'il est finalisé.",
-    image: "/Portfolio/assets/ap3.png",
+    image: "/Portfolio/assets/notfound.jpg",
     github: "#",
   },
   {
     title: "AP4 Projet à venir",
     description:
       "Pas encore disponible. Ce projet sera ajouté dès qu'il est finalisé.",
-    image: "/Portfolio/assets/ap4.png",
+    image: "/Portfolio/assets/notfound.jpg",
     github: "#",
   }
 ];
