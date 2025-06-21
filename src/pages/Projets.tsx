@@ -132,7 +132,7 @@ function Projets() {
       </section>
       {selectedProject && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center p-6 z-50 overflow-auto"
+          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-6 z-50 overflow-auto modal-fade-in"
           onClick={() => setSelectedProject(null)}
         >
           <div
@@ -142,21 +142,22 @@ function Projets() {
             <img
               src={selectedProject.image}
               alt={selectedProject.title}
-              className="w-full h-auto rounded-md mb-4 object-contain"
+              loading="lazy"
+              className="max-w-full max-h-[60vh] object-contain rounded-md mb-4"
             />
-            <h3 className="text-yellow-300 text-2xl mb-2">
-              {selectedProject.title}
-            </h3>
+            <h3 className="text-yellow-300 text-2xl mb-2">{selectedProject.title}</h3>
             <p className="text-orange-200 mb-4">{selectedProject.description}</p>
             <div className="flex flex-col gap-2">
-              <a
-                href={selectedProject.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange-400 hover:text-orange-300 underline"
-              >
-                Voir sur GitHub →
-              </a>
+              {selectedProject.github && (
+                <a
+                  href={selectedProject.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-orange-400 hover:text-orange-300 underline"
+                >
+                  Voir sur GitHub →
+                </a>
+              )}
               {selectedProject.doc && (
                 <a
                   href={selectedProject.doc}
