@@ -16,7 +16,6 @@ const AnimatedComponent: React.FC<AnimatedComponentProps> = ({
   const [isInView, setIsInView] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const elementRef = useRef<HTMLDivElement | null>(null);
-
   useEffect(() => {
     function checkMobile() {
       setIsMobile(window.innerWidth < 768);

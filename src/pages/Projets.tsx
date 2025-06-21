@@ -98,7 +98,7 @@ function Projets() {
 
       <Navbar />
       <section className="flex flex-col items-center justify-center min-h-screen px-4 text-center space-y-6 text-white">
-        <AnimatedComponent animationClass="animate-slide-in-up" disableOnMobile>
+        <AnimatedComponent animationClass="animate-slide-in-up">
           <h1 className="text-4xl md:text-5xl">
             Mes projets scolaires : <span className="text-orange-400">TP et AP</span>
           </h1>
@@ -106,12 +106,8 @@ function Projets() {
       </section>
       <section className="w-full px-10 pb-24">
         <div className="grid gap-8 md:grid-cols-3 relative z-5">
-          {projects.map((project, i) => (
-            <AnimatedComponent
-              key={i}
-              animationClass="animate-slide-in-up"
-              disableOnMobile
-            >
+          {projects.map((project) => (
+            <AnimatedComponent animationClass="animate-slide-in-up">
               <div
                 onClick={() => setSelectedProject(project)}
                 className="relative block bg-[#ff6f3c]/10 backdrop-blur-md border border-orange-400 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:z-10 hover:shadow-[0_0_25px_#ff944d] cursor-pointer"
