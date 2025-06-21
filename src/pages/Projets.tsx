@@ -15,7 +15,7 @@ const projects: Project[] = [
   {
     title: "Projet Pokémon",
     description: "Un Pokédex interactif avec Tailwind/JS et une API Pokémon.",
-    image: "/Portfolio/assets/pokedex.png",
+    image: "/Portfolio/assets/pokedex.webp",
     github: "https://github.com/william-tsn/pokedex",
     doc: "https://docs.google.com/document/d/xxx-pokedex",
   },
@@ -23,22 +23,21 @@ const projects: Project[] = [
     title: "book'ing api",
     description:
       "Librairie avec moteur de recherche, comptes, Tailwind, JS, PHP et API Google.",
-    image: "/Portfolio/assets/bookapi.png",
-    github: "https://github.com/william-tsn/flag-game",
-    doc: "https://docs.google.com/document/d/xxx-drapeaux",
+    image: "/Portfolio/assets/bookapi.webp",
+    github: "https://github.com/william-tsn/book-api",
   },
   {
     title: "Portfolio",
     description: "Mon site portfolio réalisé en React et Tailwind CSS.",
-    image: "/Portfolio/assets/portfolio.png",
-    github: "https://github.com/william-tsn/portfolio",
-    doc: "https://docs.google.com/document/d/xxx-portfolio",
+    image: "/Portfolio/assets/portfolio.webp",
+    github: "https://github.com/william-tsn/Portfolio",
+    url: "https://william-tsn.github.io/Portfolio/",
   },
   {
     title: "Projet Citoyen",
     description:
       "Site web d'un projet citoyen réalisé en HTML, CSS et dans le cadre du BTS SIO. Il sensibilise à l'accessibilité et à l'inclusion des personnes en situation de handicap.",
-    image: "/Portfolio/assets/projetc.png",
+    image: "/Portfolio/assets/projetc.webp",
     github: "https://github.com/tony78rip/projetc",
     url: "https://tony78rip.github.io/projetc/",
   },
@@ -46,7 +45,7 @@ const projects: Project[] = [
     title: "Shifumi",
     description:
       "Jeu Pierre-Papier-Ciseaux en HTML, CSS et JS contre l'ordi avec score.",
-    image: "/Portfolio/assets/shifumi.png",
+    image: "/Portfolio/assets/shifumi.webp",
     github: "https://github.com/william-tsn/shifumi",
     doc: "https://docs.google.com/document/d/xxx-shifumi",
   },
@@ -54,7 +53,7 @@ const projects: Project[] = [
     title: "AP1 Site vitrine Smarty",
     description:
       "Création d'un site vitrine responsive pour la marque Smarty, incluant des pages produits, un formulaire de contact, et une page de vente. Réalisé en HTML et CSS.",
-    image: "/Portfolio/assets/site-smarty.png",
+    image: "/Portfolio/assets/site-smarty.webp",
     github: "https://github.com/william-tsn/Site-vitrine-smarty",
     url: "https://william-tsn.github.io/Site-vitrine-smarty/index.html",
   },
@@ -62,7 +61,7 @@ const projects: Project[] = [
     title: "AP2 Clash of League",
     description:
       "Application de gestion et communication pour les équipes de Clash of League, avec réservation de stades, planning, messagerie et gestion d'équipe.",
-    image: "/Portfolio/assets/clashofleague.png",
+    image: "/Portfolio/assets/clashofleague.webp",
     github: "",
     doc: "/Portfolio/assets/AP2.pdf",
   },
@@ -70,14 +69,14 @@ const projects: Project[] = [
     title: "AP3 Projet à venir",
     description:
       "Pas encore disponible. Ce projet sera ajouté dès qu'il est finalisé.",
-    image: "/Portfolio/assets/notfound.jpg",
+    image: "/Portfolio/assets/notfound.webp",
     github: "#",
   },
   {
     title: "AP4 Projet à venir",
     description:
       "Pas encore disponible. Ce projet sera ajouté dès qu'il est finalisé.",
-    image: "/Portfolio/assets/notfound.jpg",
+    image: "/Portfolio/assets/notfound.webp",
     github: "#",
   }
 ];
