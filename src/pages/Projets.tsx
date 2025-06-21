@@ -79,7 +79,7 @@ const projects: Project[] = [
       "Pas encore disponible. Ce projet sera ajouté dès qu'il est finalisé.",
     image: "/Portfolio/assets/notfound.jpg",
     github: "#",
-  },
+  }
 ];
 
 function Projets() {
@@ -97,20 +97,20 @@ function Projets() {
       </div>
 
       <Navbar />
-
-      <section className="flex flex-col items-center justify-center min-h-[40vh] px-4 text-center space-y-6">
+      <section className="flex flex-col items-center justify-center min-h-screen px-4 text-center space-y-6 text-white">
         <AnimatedComponent animationClass="animate-slide-in-up">
           <h1 className="text-4xl md:text-5xl">
             Mes projets scolaires : <span className="text-orange-400">TP et AP</span>
           </h1>
         </AnimatedComponent>
       </section>
+
       <section className="w-full px-10 pb-24">
         <div className="grid gap-8 md:grid-cols-3 relative z-5">
-          {projects.map((project) => (
-            <AnimatedComponent key={project.title} animationClass="animate-slide-in-up">
+          {projects.map((project, index) => (
+            <AnimatedComponent animationClass="animate-slide-in-up" key={index}>
               <div
-                onClick={() => setSelectedProject(project)}
+                onClick={() => window.innerWidth >= 768 && setSelectedProject(project)}
                 className="relative block bg-[#ff6f3c]/10 backdrop-blur-md border border-orange-400 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 md:hover:z-10 md:hover:shadow-[0_0_25px_#ff944d] cursor-pointer"
               >
                 <img
@@ -118,9 +118,41 @@ function Projets() {
                   alt={project.title}
                   className="w-full h-40 object-cover"
                 />
-                <div className="p-4 flex flex-col justify-between h-40">
+                <div className="p-4 flex flex-col justify-between h-fit">
                   <h3 className="text-orange-300 text-lg mb-2">{project.title}</h3>
                   <p className="text-sm text-orange-200 mb-3">{project.description}</p>
+                  <div className="flex flex-col gap-1 md:hidden text-sm">
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-orange-400 hover:text-orange-300 underline"
+                      >
+                        GitHub →
+                      </a>
+                    )}
+                    {project.doc && (
+                      <a
+                        href={project.doc}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-orange-400 hover:text-orange-300 underline"
+                      >
+                        Documentation →
+                      </a>
+                    )}
+                    {project.url && (
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-orange-400 hover:text-orange-300 underline"
+                      >
+                        Voir le site →
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </AnimatedComponent>
@@ -145,7 +177,7 @@ function Projets() {
             <h3 className="text-yellow-300 text-2xl mb-2">{selectedProject.title}</h3>
             <p className="text-orange-200 mb-4">{selectedProject.description}</p>
             <div className="flex flex-col gap-2">
-              {selectedProject.github && selectedProject.github !== "#" && (
+              {selectedProject.github && (
                 <a
                   href={selectedProject.github}
                   target="_blank"
