@@ -11,6 +11,8 @@ body {
 html,
 body {
   height: 100%;
+  background-color: #000;
+  overscroll-behavior: none;
 }
 
 
@@ -413,11 +415,13 @@ div {
     letter-spacing: 0rem;
   }
 }
+
 @keyframes slide-in {
   0% {
     opacity: 0;
     transform: translateX(-50px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -434,6 +438,7 @@ div {
     opacity: 0;
     transform: translateX(50px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -450,6 +455,7 @@ div {
     opacity: 0;
     transform: translateY(50px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -466,6 +472,7 @@ div {
     opacity: 0;
     transform: translateY(-50px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
