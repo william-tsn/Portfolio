@@ -99,54 +99,56 @@ function Projets() {
 
       <Navbar />
 
-      <section className="flex flex-col items-center justify-center min-h-screen px-4 text-center space-y-6 text-white">
+      <section className="flex flex-col items-center justify-center min-h-[30vh] px-4 text-center space-y-6">
         <AnimatedComponent animationClass="animate-slide-in-up">
-          <h1 className="text-4xl md:text-5xl transform-gpu md:will-change-transform">
+          <h1 className="text-3xl md:text-5xl font-bold">
             Mes projets scolaires : <span className="text-orange-400">TP et AP</span>
           </h1>
         </AnimatedComponent>
       </section>
 
-      <section className="w-full px-10 pb-24">
-        <div className="grid gap-8 md:grid-cols-3 relative z-5">
+      <section className="w-full px-4 sm:px-6 md:px-10 pb-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 z-5 relative">
           {projects.map((project, idx) => (
             <AnimatedComponent key={idx} animationClass="animate-slide-in-up">
               <div
                 onClick={() => setSelectedProject(project)}
-                className="relative block bg-[#ff6f3c]/10 border border-orange-400 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:z-10 hover:shadow-[0_0_25px_#ff944d] cursor-pointer md:will-change-transform"
+                className="bg-[#ff6f3c]/10 border border-orange-400 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105 hover:z-10 hover:shadow-[0_0_20px_#ff944d] cursor-pointer"
               >
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-40 object-cover transform-gpu md:will-change-transform"
+                  className="w-full h-40 object-cover"
                 />
-                <div className="p-4 flex flex-col justify-between h-40">
-                  <h3 className="text-orange-300 text-lg mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-orange-200 mb-3">
-                    {project.description}
-                  </p>
+                <div className="p-4 space-y-2">
+                  <h3 className="text-orange-300 text-lg">{project.title}</h3>
+                  <p className="text-sm text-orange-200">{project.description}</p>
                 </div>
               </div>
             </AnimatedComponent>
           ))}
         </div>
       </section>
-
       {selectedProject && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center p-6 z-50 overflow-auto"
+          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4 overflow-auto"
           onClick={() => setSelectedProject(null)}
         >
           <div
-            className="bg-[#1e1e1e] rounded-xl max-w-3xl w-full p-6 relative"
+            className="bg-[#1e1e1e] rounded-xl max-w-lg w-full p-4 relative mx-auto"
             onClick={(e) => e.stopPropagation()}
           >
+            <button
+              onClick={() => setSelectedProject(null)}
+              className="absolute top-2 right-2 text-orange-300 hover:text-orange-500 text-xl"
+              aria-label="Fermer"
+            >
+              ✕
+            </button>
             <img
               src={selectedProject.image}
               alt={selectedProject.title}
-              className="w-full h-auto rounded-md mb-4 object-contain transform-gpu md:will-change-transform"
+              className="w-full h-auto rounded-md mb-4"
             />
             <h3 className="text-yellow-300 text-2xl mb-2">
               {selectedProject.title}
