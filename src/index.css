@@ -114,29 +114,30 @@ div {
   background-repeat: repeat-x;
   z-index: 10;
   background-position-y: 100%;
-  will-change: background-position;
   background-size: 60vw 16vh;
+  will-change: transform;
+  overflow-x: hidden;
 }
 
 .wave7 {
   animation: wave 11s linear infinite;
   filter: opacity(50%) hue-rotate(-230deg) saturate(4) brightness(1.1);
-  background-position-x: 0;
   animation-delay: 0.5s;
+  background-size: 60vw 16vh; /* Assure taille */
 }
 
 .wave8 {
   animation: reverse-wave 9s linear infinite;
   filter: opacity(75%) hue-rotate(-230deg) saturate(4) brightness(1.1);
   background-size: 60vw 13vh;
-  background-position-x: -60vw;
+  animation-delay: 0s;
 }
 
 .wave9 {
   animation: wave 7.5s linear infinite;
   filter: hue-rotate(-230deg) saturate(4) brightness(1.1);
   background-size: 60vw 10vh;
-  background-position-x: 0;
+  animation-delay: 0s;
 }
 
 .wave10,
@@ -149,29 +150,30 @@ div {
   transform: rotate(180deg);
   z-index: 2;
   background-position-y: 100%;
-  will-change: background-position;
   background-size: 60vw 16vh;
+  will-change: transform;
+  overflow-x: hidden;
 }
 
 .wave10 {
   animation: wave 11s linear infinite;
   filter: opacity(50%) hue-rotate(-230deg) saturate(4) brightness(1.1);
-  background-position-x: 0;
   animation-delay: 0.5s;
+  background-size: 60vw 16vh;
 }
 
 .wave11 {
   animation: reverse-wave 9s linear infinite;
   filter: opacity(75%) hue-rotate(-230deg) saturate(4) brightness(1.1);
-  background-position-x: -60vw;
   background-size: 60vw 13vh;
+  animation-delay: 0s;
 }
 
 .wave12 {
   animation: wave 7.5s linear infinite;
   filter: hue-rotate(-230deg) saturate(4) brightness(1.1);
-  background-position-x: 0;
   background-size: 60vw 10vh;
+  animation-delay: 0s;
 }
 
 .wave13,
