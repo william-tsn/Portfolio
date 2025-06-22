@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import AnimatedComponent from "../components/AnimatedComponent";
 
@@ -79,26 +79,15 @@ const projects: Project[] = [
       "Pas encore disponible. Ce projet sera ajouté dès qu'il est finalisé.",
     image: "/Portfolio/assets/notfound.webp",
     github: "#",
-  },
+  }
 ];
 
 function Projets() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    function checkMobile() {
-      setIsMobile(window.innerWidth < 768);
-    }
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
 
   return (
-    <div className="relative w-full min-h-screen font-ubuntu text-white pb-40">
+    <div className="relative w-full min-h-screen overflow-x-hidden font-ubuntu text-white pb-40">
       <div className="absolute inset-0 bg-gradient-to-b from-[#2c1c0b] to-black z-[-10]" />
-
       <div className="absolute inset-0 z-[10] pointer-events-none">
         <div className="wave7" />
         <div className="wave8" />
@@ -109,34 +98,15 @@ function Projets() {
       </div>
 
       <Navbar />
-
       <section className="flex flex-col items-center justify-center min-h-screen px-4 text-center space-y-6 text-white">
-        <h1 className="text-3xl md:text-5xl font-semibold">
-          Mes projets scolaires : <span className="text-orange-400">TP et AP</span>
-        </h1>
+        <AnimatedComponent animationClass="animate-slide-in-up">
+          <h1 className="text-4xl md:text-5xl">
+            Mes projets scolaires : <span className="text-orange-400">TP et AP</span>
+          </h1>
+        </AnimatedComponent>
       </section>
-
-      <section className="w-full px-4 md:px-10 pb-24">
-        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:hidden">
-          {projects.map((project, idx) => (
-            <div
-              key={idx}
-              className="bg-[#ff6f3c]/10 border border-orange-500 rounded-lg p-3 cursor-pointer"
-              onClick={() => setSelectedProject(project)}
-            >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-28 object-cover mb-2 rounded"
-                loading="lazy"
-              />
-              <h3 className="text-orange-300 text-base mb-1">{project.title}</h3>
-              <p className="text-sm text-orange-200 line-clamp-3">{project.description}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="hidden md:grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 relative z-5">
+      <section className="w-full px-10 pb-24">
+        <div className="grid gap-8 md:grid-cols-3 relative z-5">
           {projects.map((project, idx) => (
             <AnimatedComponent
               key={idx}
@@ -144,28 +114,26 @@ function Projets() {
             >
               <div
                 onClick={() => setSelectedProject(project)}
-                className={`group relative block bg-[#ff6f3c]/10 border border-orange-400 rounded-xl overflow-hidden transition-transform duration-300 cursor-pointer ${
-                  isMobile
-                    ? ""
-                    : "hover:scale-105 hover:z-10 hover:shadow-[0_0_25px_#ff944d]"
-                }`}
+                className="relative block bg-[#ff6f3c]/10 backdrop-blur-md border border-orange-400 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:z-10 hover:shadow-[0_0_25px_#ff944d] cursor-pointer"
               >
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-40 object-cover"
-                  loading="lazy"
                 />
-                <div className="p-4 flex flex-col justify-between h-36">
-                  <h3 className="text-orange-300 text-lg mb-2">{project.title}</h3>
-                  <p className="text-sm text-orange-200 line-clamp-3">{project.description}</p>
+                <div className="p-4 flex flex-col justify-between h-40">
+                  <h3 className="text-orange-300 text-lg mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm text-orange-200 mb-3">
+                    {project.description}
+                  </p>
                 </div>
               </div>
             </AnimatedComponent>
           ))}
         </div>
       </section>
-
       {selectedProject && (
         <div
           className="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center p-6 z-50 overflow-auto"
@@ -180,7 +148,9 @@ function Projets() {
               alt={selectedProject.title}
               className="w-full h-auto rounded-md mb-4 object-contain"
             />
-            <h3 className="text-yellow-300 text-2xl mb-2">{selectedProject.title}</h3>
+            <h3 className="text-yellow-300 text-2xl mb-2">
+              {selectedProject.title}
+            </h3>
             <p className="text-orange-200 mb-4">{selectedProject.description}</p>
             <div className="flex flex-col gap-2">
               <a
@@ -220,3 +190,5 @@ function Projets() {
 }
 
 export default Projets;
+
+
