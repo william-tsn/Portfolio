@@ -141,7 +141,6 @@ function Projets() {
             <AnimatedComponent
               key={idx}
               animationClass="animate-slide-in-up"
-              disableOnMobile={isMobile}
             >
               <div
                 onClick={() => setSelectedProject(project)}

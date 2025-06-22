@@ -123,7 +123,7 @@ div {
   animation: wave 11s linear infinite;
   filter: opacity(50%) hue-rotate(-230deg) saturate(4) brightness(1.1);
   animation-delay: 0.5s;
-  background-size: 60vw 16vh; /* Assure taille */
+  background-size: 60vw 16vh;
 }
 
 .wave8 {
