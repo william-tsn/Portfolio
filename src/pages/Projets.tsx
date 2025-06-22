@@ -79,14 +79,14 @@ const projects: Project[] = [
       "Pas encore disponible. Ce projet sera ajouté dès qu'il est finalisé.",
     image: "/Portfolio/assets/notfound.webp",
     github: "#",
-  }
+  },
 ];
 
 function Projets() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <div className="relative w-full min-h-screen overflow-x-hidden font-ubuntu text-white pb-40">
+    <div className="relative w-full min-h-screen font-ubuntu text-white pb-40">
       <div className="absolute inset-0 bg-gradient-to-b from-[#2c1c0b] to-black z-[-10]" />
       <div className="absolute inset-0 z-[10] pointer-events-none">
         <div className="wave7" />
@@ -99,7 +99,7 @@ function Projets() {
 
       <Navbar />
       <section className="flex flex-col items-center justify-center min-h-screen px-4 text-center space-y-6 text-white">
-        <AnimatedComponent animationClass="animate-slide-in-up">
+        <AnimatedComponent animationClass="animate-slide-in-up transform-gpu">
           <h1 className="text-4xl md:text-5xl">
             Mes projets scolaires : <span className="text-orange-400">TP et AP</span>
           </h1>
@@ -110,16 +110,17 @@ function Projets() {
           {projects.map((project, idx) => (
             <AnimatedComponent
               key={idx}
-              animationClass="animate-slide-in-up"
+              animationClass="animate-slide-in-up transform-gpu"
             >
               <div
                 onClick={() => setSelectedProject(project)}
-                className="relative block bg-[#ff6f3c]/10 backdrop-blur-md border border-orange-400 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:z-10 hover:shadow-[0_0_25px_#ff944d] cursor-pointer"
+                className="relative block bg-[#ff6f3c]/10 border border-orange-400 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:z-10 hover:shadow-[0_0_25px_#ff944d] cursor-pointer"
+                style={{ willChange: "transform" }}
               >
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-40 object-cover"
+                  className="w-full h-40 object-cover transform-gpu"
                 />
                 <div className="p-4 flex flex-col justify-between h-40">
                   <h3 className="text-orange-300 text-lg mb-2">
@@ -146,7 +147,7 @@ function Projets() {
             <img
               src={selectedProject.image}
               alt={selectedProject.title}
-              className="w-full h-auto rounded-md mb-4 object-contain"
+              className="w-full h-auto rounded-md mb-4 object-contain transform-gpu"
             />
             <h3 className="text-yellow-300 text-2xl mb-2">
               {selectedProject.title}
