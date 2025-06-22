@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import AnimatedComponent from "../components/AnimatedComponent";
 
@@ -84,11 +84,22 @@ const projects: Project[] = [
 
 function Projets() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    function checkMobile() {
+      setIsMobile(window.innerWidth < 768);
+    }
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   return (
     <div className="relative w-full min-h-screen font-ubuntu text-white pb-40">
       <div className="absolute inset-0 bg-gradient-to-b from-[#2c1c0b] to-black z-[-10]" />
-      <div className="absolute inset-0 z-[10] pointer-events-none">
+
+      <div className="absolute inset-0 z-[10] pointer-events-none hidden md:block">
         <div className="wave7" />
         <div className="wave8" />
         <div className="wave9" />
@@ -99,60 +110,78 @@ function Projets() {
 
       <Navbar />
 
-      <section className="flex flex-col items-center justify-center min-h-[30vh] px-4 text-center space-y-6">
-        <AnimatedComponent animationClass="animate-slide-in-up">
-          <h1 className="text-3xl md:text-5xl font-bold">
-            Mes projets scolaires : <span className="text-orange-400">TP et AP</span>
-          </h1>
-        </AnimatedComponent>
+      <section className="flex flex-col items-center justify-center min-h-screen px-4 text-center space-y-6 text-white">
+        <h1 className="text-3xl md:text-5xl font-semibold">
+          Mes projets scolaires : <span className="text-orange-400">TP et AP</span>
+        </h1>
       </section>
 
-      <section className="w-full px-4 sm:px-6 md:px-10 pb-24">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 z-5 relative">
+      <section className="w-full px-4 md:px-10 pb-24">
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:hidden">
           {projects.map((project, idx) => (
-            <AnimatedComponent key={idx} animationClass="animate-slide-in-up">
+            <div
+              key={idx}
+              className="bg-[#ff6f3c]/10 border border-orange-500 rounded-lg p-3 cursor-pointer"
+              onClick={() => setSelectedProject(project)}
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-28 object-cover mb-2 rounded"
+                loading="lazy"
+              />
+              <h3 className="text-orange-300 text-base mb-1">{project.title}</h3>
+              <p className="text-sm text-orange-200 line-clamp-3">{project.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="hidden md:grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 relative z-5">
+          {projects.map((project, idx) => (
+            <AnimatedComponent
+              key={idx}
+              animationClass="animate-slide-in-up"
+              disableOnMobile={isMobile}
+            >
               <div
                 onClick={() => setSelectedProject(project)}
-                className="bg-[#ff6f3c]/10 border border-orange-400 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105 hover:z-10 hover:shadow-[0_0_20px_#ff944d] cursor-pointer"
+                className={`group relative block bg-[#ff6f3c]/10 border border-orange-400 rounded-xl overflow-hidden transition-transform duration-300 cursor-pointer ${
+                  isMobile
+                    ? ""
+                    : "hover:scale-105 hover:z-10 hover:shadow-[0_0_25px_#ff944d]"
+                }`}
               >
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-40 object-cover"
+                  loading="lazy"
                 />
-                <div className="p-4 space-y-2">
-                  <h3 className="text-orange-300 text-lg">{project.title}</h3>
-                  <p className="text-sm text-orange-200">{project.description}</p>
+                <div className="p-4 flex flex-col justify-between h-36">
+                  <h3 className="text-orange-300 text-lg mb-2">{project.title}</h3>
+                  <p className="text-sm text-orange-200 line-clamp-3">{project.description}</p>
                 </div>
               </div>
             </AnimatedComponent>
           ))}
         </div>
       </section>
+
       {selectedProject && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4 overflow-auto"
+          className="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center p-6 z-50 overflow-auto"
           onClick={() => setSelectedProject(null)}
         >
           <div
-            className="bg-[#1e1e1e] rounded-xl max-w-lg w-full p-4 relative mx-auto"
+            className="bg-[#1e1e1e] rounded-xl max-w-3xl w-full p-6 relative"
             onClick={(e) => e.stopPropagation()}
           >
-            <button
-              onClick={() => setSelectedProject(null)}
-              className="absolute top-2 right-2 text-orange-300 hover:text-orange-500 text-xl"
-              aria-label="Fermer"
-            >
-              ✕
-            </button>
             <img
               src={selectedProject.image}
               alt={selectedProject.title}
-              className="w-full h-auto rounded-md mb-4"
+              className="w-full h-auto rounded-md mb-4 object-contain"
             />
-            <h3 className="text-yellow-300 text-2xl mb-2">
-              {selectedProject.title}
-            </h3>
+            <h3 className="text-yellow-300 text-2xl mb-2">{selectedProject.title}</h3>
             <p className="text-orange-200 mb-4">{selectedProject.description}</p>
             <div className="flex flex-col gap-2">
               <a
