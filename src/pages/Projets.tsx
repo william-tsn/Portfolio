@@ -99,7 +99,7 @@ function Projets() {
     <div className="relative w-full min-h-screen font-ubuntu text-white pb-40">
       <div className="absolute inset-0 bg-gradient-to-b from-[#2c1c0b] to-black z-[-10]" />
 
-      <div className="absolute inset-0 z-[10] pointer-events-none hidden md:block">
+      <div className="absolute inset-0 z-[10] pointer-events-none">
         <div className="wave7" />
         <div className="wave8" />
         <div className="wave9" />
