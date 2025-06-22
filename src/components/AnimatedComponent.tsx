@@ -24,7 +24,9 @@ const AnimatedComponent: React.FC<AnimatedComponentProps> = ({
   const elementRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    function checkMobile() {
+      setIsMobile(window.innerWidth < 768);
+    }
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
@@ -41,7 +43,6 @@ const AnimatedComponent: React.FC<AnimatedComponentProps> = ({
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsInView(true);
-            observer.unobserve(entry.target);
           }
         });
       },
@@ -52,13 +53,17 @@ const AnimatedComponent: React.FC<AnimatedComponentProps> = ({
       observer.observe(elementRef.current);
     }
 
-    return () => observer.disconnect();
+    return () => {
+      if (elementRef.current) {
+        observer.unobserve(elementRef.current);
+      }
+    };
   }, [threshold, disableOnMobile, isMobile]);
 
   return (
     <div
       ref={elementRef}
-      className={`transition-opacity duration-1000 ease-out transform-gpu will-change-transform ${
+      className={`transition-opacity duration-1000 ease-out will-change-transform motion-safe:transform ${
         isInView ? `${animationClass} opacity-100` : 'opacity-0'
       }`}
     >

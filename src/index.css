@@ -539,3 +539,9 @@ div {
     opacity: 1;
   }
 }
+
+@media (max-width: 768px) {
+  .will-change-transform {
+    will-change: auto !important;
+  }
+}
