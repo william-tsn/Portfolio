@@ -2,7 +2,13 @@ import React, { useEffect, useRef, useState, ReactNode } from 'react';
 
 interface AnimatedComponentProps {
   children: ReactNode;
-  animationClass?: 'animate-slide-in' | 'animate-slide-in-right' | 'animate-slide-in-up' | 'animate-slide-in-down' | 'split-effect' | 'falling';
+  animationClass?:
+    | 'animate-slide-in'
+    | 'animate-slide-in-right'
+    | 'animate-slide-in-up'
+    | 'animate-slide-in-down'
+    | 'split-effect'
+    | 'falling';
   threshold?: number;
   disableOnMobile?: boolean;
 }
@@ -16,6 +22,7 @@ const AnimatedComponent: React.FC<AnimatedComponentProps> = ({
   const [isInView, setIsInView] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const elementRef = useRef<HTMLDivElement | null>(null);
+
   useEffect(() => {
     function checkMobile() {
       setIsMobile(window.innerWidth < 768);
@@ -56,7 +63,7 @@ const AnimatedComponent: React.FC<AnimatedComponentProps> = ({
   return (
     <div
       ref={elementRef}
-      className={`transition-opacity duration-1000 ease-out ${
+      className={`transition-opacity duration-1000 ease-out will-change-transform motion-safe:transform ${
         isInView ? `${animationClass} opacity-100` : 'opacity-0'
       }`}
     >

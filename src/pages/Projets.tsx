@@ -98,29 +98,27 @@ function Projets() {
       </div>
 
       <Navbar />
+
       <section className="flex flex-col items-center justify-center min-h-screen px-4 text-center space-y-6 text-white">
-        <AnimatedComponent animationClass="animate-slide-in-up transform-gpu">
-          <h1 className="text-4xl md:text-5xl">
+        <AnimatedComponent animationClass="animate-slide-in-up">
+          <h1 className="text-4xl md:text-5xl transform-gpu will-change-transform">
             Mes projets scolaires : <span className="text-orange-400">TP et AP</span>
           </h1>
         </AnimatedComponent>
       </section>
+
       <section className="w-full px-10 pb-24">
         <div className="grid gap-8 md:grid-cols-3 relative z-5">
           {projects.map((project, idx) => (
-            <AnimatedComponent
-              key={idx}
-              animationClass="animate-slide-in-up transform-gpu"
-            >
+            <AnimatedComponent key={idx} animationClass="animate-slide-in-up">
               <div
                 onClick={() => setSelectedProject(project)}
-                className="relative block bg-[#ff6f3c]/10 border border-orange-400 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:z-10 hover:shadow-[0_0_25px_#ff944d] cursor-pointer"
-                style={{ willChange: "transform" }}
+                className="relative block bg-[#ff6f3c]/10 border border-orange-400 rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:z-10 hover:shadow-[0_0_25px_#ff944d] cursor-pointer will-change-transform"
               >
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-40 object-cover transform-gpu"
+                  className="w-full h-40 object-cover transform-gpu will-change-transform"
                 />
                 <div className="p-4 flex flex-col justify-between h-40">
                   <h3 className="text-orange-300 text-lg mb-2">
@@ -135,6 +133,7 @@ function Projets() {
           ))}
         </div>
       </section>
+
       {selectedProject && (
         <div
           className="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center p-6 z-50 overflow-auto"
@@ -147,7 +146,7 @@ function Projets() {
             <img
               src={selectedProject.image}
               alt={selectedProject.title}
-              className="w-full h-auto rounded-md mb-4 object-contain transform-gpu"
+              className="w-full h-auto rounded-md mb-4 object-contain transform-gpu will-change-transform"
             />
             <h3 className="text-yellow-300 text-2xl mb-2">
               {selectedProject.title}
