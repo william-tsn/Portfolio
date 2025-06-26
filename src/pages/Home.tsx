@@ -33,8 +33,7 @@ function Accueil() {
             <p className="text-lg leading-relaxed">
               Bonjour, je m'appelle <strong>William Tousson</strong>, j'ai 19 ans.
               Après un <strong className="text-purple-400">Bac Pro MELEC</strong>, j'ai choisi de me spécialiser dans l'informatique
-              en intégrant un <strong className="text-purple-400">BTS SIO</strong> à l'IPSSI,
-              une grande école d'informatique située à Saint-Quentin-en-Yvelines.
+              en intégrant un <strong className="text-purple-400">BTS SIO</strong> avec l'option SLAM pour me former au développement de logiciels et d'applications.
             </p>
             <p className="text-lg">Vous retrouverez ci-dessous mon CV :</p>
 
@@ -48,6 +47,7 @@ function Accueil() {
           </div>
         </AnimatedComponent>
       </section>
+
       <section className="min-h-screen w-full flex flex-col items-center justify-center px-6 text-center py-20 space-y-10 bg-transparent">
         <AnimatedComponent animationClass="animate-slide-in-right">
           <h1 className="neon text-4xl mb-4">Ma formation</h1>
@@ -78,11 +78,67 @@ function Accueil() {
           </div>
         </AnimatedComponent>
       </section>
+      <section className="min-h-screen w-full flex flex-col items-center justify-center px-6 text-center py-20 space-y-10 bg-transparent">
+        <AnimatedComponent animationClass="animate-slide-in-right">
+          <h1 className="neon text-4xl mb-4">Parcours scolaire</h1>
+          <div className="max-w-3xl space-y-6">
+            <div className="border border-purple-400 p-4 rounded-lg space-y-2">
+              <h2 className="text-xl text-purple-400 mb-2">BTS SIO Option SLAM</h2>
+              <p>
+                Formation spécialisée dans le développement d'applications, la conception de logiciels,
+                la gestion de bases de données et la création de solutions informatiques.
+              </p>
+            </div>
+            <div className="border border-purple-400 p-4 rounded-lg space-y-2">
+              <h2 className="text-xl text-purple-400 mb-2">Bac Pro MELEC</h2>
+              <p>
+                Formation en métiers de l'électricité et de ses environnements connectés.
+                Cette formation m'a permis de développer de la rigueur, de la logique et une forte capacité d'adaptation.
+              </p>
+            </div>
+          </div>
+        </AnimatedComponent>
+      </section>
+
+      <section className="min-h-screen w-full flex flex-col items-center justify-center px-6 text-center py-20 space-y-10 bg-transparent">
+        <AnimatedComponent animationClass="animate-slide-in-up">
+          <h1 className="neon text-4xl mb-4">Parcours professionnel</h1>
+          <div className="max-w-3xl space-y-6">
+
+            <div className="border border-purple-400 p-4 rounded-lg space-y-2">
+              <h2 className="text-xl text-purple-400 mb-2">Développeur Web - Dream Machine (2025)</h2>
+              <p>
+                Stage de deux mois dans lequel j'ai participé au développement front-end du site internet de l'entreprise en HTML, CSS, JavaScript et PHP. 
+                J'ai également conçu des scripts pour l'automatisation de la traduction multilingue et contribué à l'amélioration de l'ergonomie du site.
+              </p>
+            </div>
+
+            <div className="border border-purple-400 p-4 rounded-lg space-y-2">
+              <h2 className="text-xl text-purple-400 mb-2">Marketing Digital - Dream Machine (2024)</h2>
+              <p>
+                Poste en contrat CDD de 3 mois durant lequel j'ai optimisé les fiches produits sur Magento, 
+                rédigé les descriptions, ajouté des visuels et amélioré le référencement pour renforcer la visibilité du site.
+              </p>
+            </div>
+
+            <div className="border border-purple-400 p-4 rounded-lg space-y-2">
+              <h2 className="text-xl text-purple-400 mb-2">Électricien - SGEM (2023)</h2>
+              <p>
+                Stage en entreprise où j'ai réalisé des tâches telles que la préparation de platines, le câblage d'installations 
+                et la vérification des systèmes électriques. Cette expérience m'a appris la rigueur et la précision.
+              </p>
+            </div>
+
+          </div>
+        </AnimatedComponent>
+      </section>
+
       <Competences />
+
       <section className="min-h-screen w-full flex flex-col items-center justify-center px-6 text-center py-20 space-y-10 bg-transparent">
         <AnimatedComponent animationClass="animate-slide-in-up">
           <h1 className="neon text-4xl">Me contacter</h1>
-        <div className="space-y-6">
+          <div className="space-y-6">
             <h2 className="text-2xl hover:text-violet-400 cursor-pointer pt-6">
               <FontAwesomeIcon icon={faPhone} className="mr-2" />
               <a href="tel:0769058970">07 69 05 89 70</a>
@@ -97,7 +153,7 @@ function Accueil() {
                 LinkedIn
               </a>
             </h2>
-        </div>
+          </div>
         </AnimatedComponent>
       </section>
 
