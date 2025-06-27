@@ -47,7 +47,27 @@ function Accueil() {
           </div>
         </AnimatedComponent>
       </section>
-
+       <section className="min-h-screen w-full flex flex-col items-center justify-center px-6 text-center py-20 space-y-10 bg-transparent">
+        <AnimatedComponent animationClass="animate-slide-in-right">
+          <h1 className="neon text-4xl mb-4">Parcours scolaire</h1>
+          <div className="max-w-3xl space-y-6">
+            <div className="border border-purple-400 p-4 rounded-lg space-y-2">
+              <h2 className="text-xl text-purple-400 mb-2">BTS SIO Option SLAM</h2>
+              <p>
+                Formation spécialisée dans le développement d'applications, la conception de logiciels,
+                la gestion de bases de données et la création de solutions informatiques.
+              </p>
+            </div>
+            <div className="border border-purple-400 p-4 rounded-lg space-y-2">
+              <h2 className="text-xl text-purple-400 mb-2">Bac Pro MELEC</h2>
+              <p>
+                Formation en métiers de l'électricité et de ses environnements connectés.
+                Cette formation m'a permis de développer de la rigueur, de la logique et une forte capacité d'adaptation.
+              </p>
+            </div>
+          </div>
+        </AnimatedComponent>
+      </section>
       <section className="min-h-screen w-full flex flex-col items-center justify-center px-6 text-center py-20 space-y-10 bg-transparent">
         <AnimatedComponent animationClass="animate-slide-in-right">
           <h1 className="neon text-4xl mb-4">Ma formation</h1>
@@ -78,28 +98,6 @@ function Accueil() {
           </div>
         </AnimatedComponent>
       </section>
-      <section className="min-h-screen w-full flex flex-col items-center justify-center px-6 text-center py-20 space-y-10 bg-transparent">
-        <AnimatedComponent animationClass="animate-slide-in-right">
-          <h1 className="neon text-4xl mb-4">Parcours scolaire</h1>
-          <div className="max-w-3xl space-y-6">
-            <div className="border border-purple-400 p-4 rounded-lg space-y-2">
-              <h2 className="text-xl text-purple-400 mb-2">BTS SIO Option SLAM</h2>
-              <p>
-                Formation spécialisée dans le développement d'applications, la conception de logiciels,
-                la gestion de bases de données et la création de solutions informatiques.
-              </p>
-            </div>
-            <div className="border border-purple-400 p-4 rounded-lg space-y-2">
-              <h2 className="text-xl text-purple-400 mb-2">Bac Pro MELEC</h2>
-              <p>
-                Formation en métiers de l'électricité et de ses environnements connectés.
-                Cette formation m'a permis de développer de la rigueur, de la logique et une forte capacité d'adaptation.
-              </p>
-            </div>
-          </div>
-        </AnimatedComponent>
-      </section>
-
       <section className="min-h-screen w-full flex flex-col items-center justify-center px-6 text-center py-20 space-y-10 bg-transparent">
         <AnimatedComponent animationClass="animate-slide-in-up">
           <h1 className="neon text-4xl mb-4">Parcours professionnel</h1>
