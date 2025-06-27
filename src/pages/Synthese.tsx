@@ -25,7 +25,7 @@ function TableauSynthese() {
             </section>
             <section className="flex justify-center items-center min-h-screen px-4 pb-40">
                 <img
-                    src="/Portfolio/assets/tableau.jpg"
+                    src="/Portfolio/assets/tableau.png"
                     alt="Tableau de synthèse"
                     className="w-full max-w-5xl rounded shadow-lg object-contain h-full"
                 />

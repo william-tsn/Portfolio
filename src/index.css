@@ -32,7 +32,7 @@ div {
 }
 
 .wave1 {
-  animation: wave-50 15s linear infinite;
+  animation: wave 15s linear infinite;
   filter: opacity(50%);
   background-size: 50vw 15vh;
   animation-delay: 1s;
@@ -40,36 +40,16 @@ div {
 }
 
 .wave2 {
-  animation: reverse-wave-50 8.3s linear infinite;
+  animation: reverse-wave 8.3s linear infinite;
   filter: opacity(75%);
   background-size: 50vw 12vh;
   background-position-x: -50vw;
 }
 
 .wave3 {
-  animation: wave-50 6.9s linear infinite;
+  animation: wave 6.9s linear infinite;
   background-size: 50vw 9vh;
   background-position-x: 0;
-}
-
-@keyframes wave-50 {
-  0% {
-    background-position-x: 0;
-  }
-
-  100% {
-    background-position-x: -50vw;
-  }
-}
-
-@keyframes reverse-wave-50 {
-  0% {
-    background-position-x: -50vw;
-  }
-
-  100% {
-    background-position-x: 0;
-  }
 }
 
 .wave4,
@@ -85,7 +65,7 @@ div {
 }
 
 .wave4 {
-  animation: wave-50 10s linear infinite;
+  animation: wave 10s linear infinite;
   filter: opacity(50%);
   background-size: 50vw 15vh;
   animation-delay: 1s;
@@ -93,14 +73,14 @@ div {
 }
 
 .wave5 {
-  animation: reverse-wave-50 8.3s linear infinite;
+  animation: reverse-wave 8.3s linear infinite;
   filter: opacity(75%);
   background-size: 50vw 12vh;
   background-position-x: -50vw;
 }
 
 .wave6 {
-  animation: wave-50 6.9s linear infinite;
+  animation: wave 6.9s linear infinite;
   background-size: 50vw 9vh;
   background-position-x: 0;
 }
