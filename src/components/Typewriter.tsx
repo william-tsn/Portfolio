@@ -16,13 +16,27 @@ type Fragment = {
 export default function NonEuclideanText({ parts }: { parts: Part[] }) {
   const fullText = parts.map(p => p.text).join("");
   const [fragments, setFragments] = useState<Fragment[]>([]);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  useEffect(() => {
+    const spreadX = isMobile ? 140 : 600;
+    const spreadY = isMobile ? 90 : 400;
+    const rotation = isMobile ? 20 : 120;
+    const baseDelay = isMobile ? 250 : 400;
+    const randomDelay = isMobile ? 800 : 2000;
+
     const initial: Fragment[] = fullText.split("").map(char => ({
       char,
-      x: (Math.random() - 0.5) * 600,
-      y: (Math.random() - 0.5) * 400,
-      r: (Math.random() - 0.5) * 120,
+      x: (Math.random() - 0.5) * spreadX,
+      y: (Math.random() - 0.5) * spreadY,
+      r: (Math.random() - 0.5) * rotation,
       settled: false,
     }));
 
@@ -32,27 +46,28 @@ export default function NonEuclideanText({ parts }: { parts: Part[] }) {
       setTimeout(() => {
         setFragments(prev => {
           const copy = [...prev];
+          if (!copy[i]) return prev;
           copy[i] = { ...copy[i], x: 0, y: 0, r: 0, settled: true };
           return copy;
         });
-      }, 400 + Math.random() * 2000);
+      }, baseDelay + Math.random() * randomDelay);
     });
-  }, [fullText]);
+  }, [fullText, isMobile]);
 
   let index = 0;
 
   return (
-    <div
-      className="
-        relative
-        flex
-        justify-center
-        text-6xl md:text-7xl
-        font-light
-        tracking-widest
-        whitespace-pre
-      "
-    >
+  <div
+  className="
+    relative
+    flex
+    justify-center
+    whitespace-pre
+    text-3xl sm:text-xl md:text-7xl
+    font-light
+    tracking-normal sm:tracking-wide md:tracking-widest
+  "
+>
       {parts.map((part, pIndex) => {
         const letters = fragments.slice(index, index + part.text.length);
         index += part.text.length;
@@ -60,13 +75,12 @@ export default function NonEuclideanText({ parts }: { parts: Part[] }) {
         return (
           <span key={pIndex} className="flex">
             {letters.map((f, i) => {
-              // ✅ CAS SPÉCIAL : ESPACE
               if (f.char === " ") {
                 return (
                   <span
                     key={i}
                     className="inline-block"
-                    style={{ width: "0.6em" }}
+                    style={{ width: isMobile ? "0.4em" : "0.6em" }}
                   />
                 );
               }
@@ -77,7 +91,7 @@ export default function NonEuclideanText({ parts }: { parts: Part[] }) {
                   className="
                     inline-block
                     transition-all
-                    duration-[1600ms]
+                    duration-[1200ms] md:duration-[1600ms]
                     ease-[cubic-bezier(.16,1,.3,1)]
                   "
                   style={{
