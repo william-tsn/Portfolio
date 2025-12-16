@@ -15,17 +15,23 @@ function Accueil() {
         <h2 className="text-3xl md:text-4xl">
           Bienvenue sur mon portfolio
         </h2>
-        <TypewriterGlitch
-          parts={[
-            { text: "Je m'appelle " },
-            { text: 'William Tousson', color: '#a855f7' },
-          ]}
-        />
+        <div className="flex flex-col items-center gap-2 lg:flex-row lg:gap-4">
+          <TypewriterGlitch
+            parts={[
+              { text: "Je m'appelle", color: "white" },
+            ]}
+          />
+          <br className="block lg:hidden" />
+          <TypewriterGlitch
+            parts={[
+              { text: "William Tousson", color: "#a855f7" },
+            ]}
+          />
+        </div>
         <div className="wave1 pointer-events-none" />
         <div className="wave2 pointer-events-none" />
         <div className="wave3 pointer-events-none" />
       </div>
-
       <section className="min-h-screen w-full flex flex-col items-center justify-center px-6 text-center py-20 space-y-10 bg-transparent">
         <AnimatedComponent animationClass="animate-slide-in-up">
           <h1 className="neon text-4xl mb-4">Qui suis-je</h1>
