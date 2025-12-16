@@ -3,7 +3,7 @@ import AnimatedComponent from "../components/AnimatedComponent";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import TypewriterGlitch from "../components/TypewriterGlitch";
+import TypewriterGlitch from "../components/Typewriter";
 import Competences from "../components/Competences";
 
 function Accueil() {
