@@ -11,7 +11,7 @@ function Accueil() {
     <div className="font-ubuntu w-full min-h-screen bg-gradient-to-b from-[#0f0a1f] to-black overflow-x-hidden text-white">
       <Navbar />
 
-      <div className="flex flex-col items-center justify-center min-h-screen px-4 text-center space-y-6">
+      <div className="flex flex-col items-center justify-center min-h-screen px-4 text-center space-y-12">
         <h2 className="text-3xl md:text-4xl">
           Bienvenue sur mon portfolio
         </h2>
@@ -42,12 +42,11 @@ function Accueil() {
               href="/Portfolio/assets/tousson-william-cv.pdf"
               className="inline-block px-6 py-2 border-2 border-purple-400 text-purple-400 rounded-lg hover:bg-purple-400 hover:text-black transition mt-4"
             >
-              MON CV
-            </a>
+              Mon cv</a>
           </div>
         </AnimatedComponent>
       </section>
-       <section className="min-h-screen w-full flex flex-col items-center justify-center px-6 text-center py-20 space-y-10 bg-transparent">
+      <section className="min-h-screen w-full flex flex-col items-center justify-center px-6 text-center py-20 space-y-10 bg-transparent">
         <AnimatedComponent animationClass="animate-slide-in-right">
           <h1 className="neon text-4xl mb-4">Parcours scolaire</h1>
           <div className="max-w-3xl space-y-6">
@@ -106,7 +105,7 @@ function Accueil() {
             <div className="border border-purple-400 p-4 rounded-lg space-y-2">
               <h2 className="text-xl text-purple-400 mb-2">Développeur Web - Dream Machine (2025)</h2>
               <p>
-                Stage de deux mois dans lequel j'ai participé au développement front-end du site internet de l'entreprise en HTML, CSS, JavaScript et PHP. 
+                Stage de deux mois dans lequel j'ai participé au développement front-end du site internet de l'entreprise en HTML, CSS, JavaScript et PHP.
                 J'ai également conçu des scripts pour l'automatisation de la traduction multilingue et contribué à l'amélioration de l'ergonomie du site.
               </p>
             </div>
@@ -114,7 +113,7 @@ function Accueil() {
             <div className="border border-purple-400 p-4 rounded-lg space-y-2">
               <h2 className="text-xl text-purple-400 mb-2">Marketing Digital - Dream Machine (2024)</h2>
               <p>
-                Poste en contrat CDD de 3 mois durant lequel j'ai optimisé les fiches produits sur Magento, 
+                Poste en contrat CDD de 3 mois durant lequel j'ai optimisé les fiches produits sur Magento,
                 rédigé les descriptions, ajouté des visuels et amélioré le référencement pour renforcer la visibilité du site.
               </p>
             </div>
@@ -122,7 +121,7 @@ function Accueil() {
             <div className="border border-purple-400 p-4 rounded-lg space-y-2">
               <h2 className="text-xl text-purple-400 mb-2">Électricien - SGEM (2023)</h2>
               <p>
-                Stage en entreprise où j'ai réalisé des tâches telles que la préparation de platines, le câblage d'installations 
+                Stage en entreprise où j'ai réalisé des tâches telles que la préparation de platines, le câblage d'installations
                 et la vérification des systèmes électriques. Cette expérience m'a appris la rigueur et la précision.
               </p>
             </div>

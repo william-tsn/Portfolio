@@ -1,67 +1,98 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-interface TypewriterGlitchProps {
-  parts: { text: string; color?: string }[];
+interface Part {
+  text: string;
+  color?: string;
 }
 
-const TypewriterGlitch = ({ parts }: TypewriterGlitchProps) => {
-  const charset = 'ҺңҢҹӌӂҿҗѽѩ'.split('');
-  const fullText = parts.map((p) => p.text).join('');
-
-  const [displayedText, setDisplayedText] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isDone, setIsDone] = useState(false);
-
-  useEffect(() => {
-    if (currentIndex >= fullText.length) {
-      setIsDone(true);
-      return;
-    }
-
-    let glitchCount = 0;
-    let timeoutId: any;
-
-    const doGlitch = () => {
-      if (glitchCount < 2) {
-        const randomChar = charset[Math.floor(Math.random() * charset.length)];
-        setDisplayedText(fullText.slice(0, currentIndex) + randomChar);
-        glitchCount++;
-        timeoutId = setTimeout(doGlitch, 35);
-      } else {
-        setDisplayedText(fullText.slice(0, currentIndex + 1));
-        setCurrentIndex((prev) => prev + 1);
-      }
-    };
-
-    doGlitch();
-
-    return () => clearTimeout(timeoutId);
-  }, [currentIndex, fullText]);
-
-  const renderColoredText = () => {
-    let remaining = displayedText;
-    const elements = [];
-    for (const part of parts) {
-      if (remaining.length === 0) break;
-      const partText = part.text;
-      const sliceText = remaining.slice(0, partText.length);
-      remaining = remaining.slice(partText.length);
-
-      elements.push(
-        <span key={elements.length} style={{ color: part.color || 'inherit' }}>
-          {sliceText}
-        </span>
-      );
-    }
-    return elements;
-  };
-
-  return (
-    <div className="text-4xl md:text-6xl text-white text-center p-4 font-ubuntu">
-      {renderColoredText()}
-      {!isDone && <span className="animate-pulse text-[#00ffcc]">|</span>}
-    </div>
-  );
+type Fragment = {
+  char: string;
+  x: number;
+  y: number;
+  r: number;
+  settled: boolean;
 };
 
-export default TypewriterGlitch;
+export default function NonEuclideanText({ parts }: { parts: Part[] }) {
+  const fullText = parts.map(p => p.text).join("");
+  const [fragments, setFragments] = useState<Fragment[]>([]);
+
+  useEffect(() => {
+    const initial: Fragment[] = fullText.split("").map(char => ({
+      char,
+      x: (Math.random() - 0.5) * 600,
+      y: (Math.random() - 0.5) * 400,
+      r: (Math.random() - 0.5) * 120,
+      settled: false,
+    }));
+
+    setFragments(initial);
+
+    initial.forEach((_, i) => {
+      setTimeout(() => {
+        setFragments(prev => {
+          const copy = [...prev];
+          copy[i] = { ...copy[i], x: 0, y: 0, r: 0, settled: true };
+          return copy;
+        });
+      }, 400 + Math.random() * 2000);
+    });
+  }, [fullText]);
+
+  let index = 0;
+
+  return (
+    <div
+      className="
+        relative
+        flex
+        justify-center
+        text-6xl md:text-7xl
+        font-light
+        tracking-widest
+        whitespace-pre
+      "
+    >
+      {parts.map((part, pIndex) => {
+        const letters = fragments.slice(index, index + part.text.length);
+        index += part.text.length;
+
+        return (
+          <span key={pIndex} className="flex">
+            {letters.map((f, i) => {
+              // ✅ CAS SPÉCIAL : ESPACE
+              if (f.char === " ") {
+                return (
+                  <span
+                    key={i}
+                    className="inline-block"
+                    style={{ width: "0.6em" }}
+                  />
+                );
+              }
+
+              return (
+                <span
+                  key={i}
+                  className="
+                    inline-block
+                    transition-all
+                    duration-[1600ms]
+                    ease-[cubic-bezier(.16,1,.3,1)]
+                  "
+                  style={{
+                    transform: `translate(${f.x}px, ${f.y}px) rotate(${f.r}deg)`,
+                    opacity: f.settled ? 1 : 0.35,
+                    color: part.color || "white",
+                  }}
+                >
+                  {f.char}
+                </span>
+              );
+            })}
+          </span>
+        );
+      })}
+    </div>
+  );
+}

@@ -26,15 +26,17 @@ div {
   inset: 0;
   background: url("/Portfolio/assets/wave.png");
   background-repeat: repeat-x;
-  z-index: 2;
-  will-change: background-position;
+  z-index: 10;
   background-position-y: 100%;
+  background-size: 60vw 16vh;
+  will-change: transform;
+  overflow-x: hidden;
 }
 
 .wave1 {
   animation: wave 15s linear infinite;
   filter: opacity(50%);
-  background-size: 50vw 15vh;
+  background-size: 60vw 16vh;
   animation-delay: 1s;
   background-position-x: 0;
 }
@@ -42,32 +44,36 @@ div {
 .wave2 {
   animation: reverse-wave 8.3s linear infinite;
   filter: opacity(75%);
-  background-size: 50vw 12vh;
+  background-size: 60vw 13vh;
   background-position-x: -50vw;
 }
 
 .wave3 {
   animation: wave 6.9s linear infinite;
-  background-size: 50vw 9vh;
+  background-size: 60vw 10vh;
   background-position-x: 0;
 }
+
 
 .wave4,
 .wave5,
 .wave6 {
-  position: absolute;
+   position: absolute;
   inset: 0;
   background: url("/Portfolio/assets/wave.png");
   background-repeat: repeat-x;
   transform: rotate(180deg);
-  will-change: background-position;
+  z-index: 2;
   background-position-y: 100%;
+  background-size: 60vw 16vh;
+  will-change: transform;
+  overflow-x: hidden;
 }
 
 .wave4 {
   animation: wave 10s linear infinite;
   filter: opacity(50%);
-  background-size: 50vw 15vh;
+  background-size: 60vw 16vh;
   animation-delay: 1s;
   background-position-x: 0;
 }
@@ -75,13 +81,13 @@ div {
 .wave5 {
   animation: reverse-wave 8.3s linear infinite;
   filter: opacity(75%);
-  background-size: 50vw 12vh;
+  background-size: 60vw 13vh;
   background-position-x: -50vw;
 }
 
 .wave6 {
   animation: wave 6.9s linear infinite;
-  background-size: 50vw 9vh;
+  background-size: 60vw 10vh;
   background-position-x: 0;
 }
 
