@@ -24,7 +24,7 @@ const projects: Project[] = [
     description:
       "Librairie avec moteur de recherche, comptes, Tailwind, JS, PHP et API Google.",
     image: "/Portfolio/assets/bookapi.webp",
-    github: "https://github.com/william-tsn/flag-game",
+    github: "https://github.com/william-tsn/book-api",
     doc: "https://docs.google.com/document/d/xxx-drapeaux",
   },
   {
@@ -67,18 +67,25 @@ const projects: Project[] = [
     doc: "/Portfolio/assets/AP2.pdf",
   },
   {
-    title: "AP3 Projet à venir",
+    title: "AP3 Clash of League front-end",
     description:
-      "Pas encore disponible. Ce projet sera ajouté dès qu'il est finalisé.",
-    image: "/Portfolio/assets/notfound.webp",
-    github: "#",
+      "Partie front-end d'une application de gestion et communication pour les équipes de Clash of League, avec réservation de stades, planning, messagerie et gestion d'équipe. Réalisé en React.",
+    image: "/Portfolio/assets/clashofleague.webp",
+    github: "https://github.com/victorcb2003/ClashFrontEnd",
   },
   {
-    title: "AP4 Projet à venir",
+    title: "AP3 Clash of League back-end",
     description:
-      "Pas encore disponible. Ce projet sera ajouté dès qu'il est finalisé.",
-    image: "/Portfolio/assets/notfound.webp",
-    github: "#",
+      "Partie back-end d'une application de gestion et communication pour les équipes de Clash of League, avec réservation de stades, planning, messagerie et gestion d'équipe. Réalisé en Node.js.",
+    image: "/Portfolio/assets/clashofleague.webp",
+    github: "https://github.com/victorcb2003/ClashBackEnd",
+  },
+  {
+    title: "AP4 Clash of League mobile",
+    description:
+      "Partie mobile d'une application de gestion et communication pour les équipes de Clash of League, avec réservation de stades, planning, messagerie et gestion d'équipe. Réalisé en React Native.",
+    image: "/Portfolio/assets/clashofleague.webp",
+    github: "https://github.com/victorcb2003/ClashMobile",
   }
 ];
 
