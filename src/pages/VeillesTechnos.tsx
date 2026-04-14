@@ -42,22 +42,22 @@ function VeilleTechno() {
                     <div className="max-w-3xl space-y-6 text-left">
                         <ul className="space-y-4 text-lg list-disc list-inside">
                             <li>
-                                <strong className="text-green-400">21 mai 2025 - NVIDIA Blackwell</strong> : Nouvelle génération de GPU spécialement conçue pour l’IA générative, le cloud et le calcul intensif. Les performances sont doublées par rapport aux puces précédentes, avec une optimisation des API et frameworks IA.
+                                <strong className="text-green-400">Mars 2026 - NVIDIA GTC</strong> : Lors de sa conférence annuelle, NVIDIA a présentées ses dernières avancées en intelligence artificielle, notamment dans les GPU, les data centers et les applications d’IA générative.
                             </li>
                             <li>
-                                <strong className="text-green-400">22 mai 2025 - NVIDIA NIM (NVIDIA Inference Microservices)</strong> : NVIDIA lance des microservices IA prêts à l'emploi. Ils permettent aux développeurs d'intégrer des modèles IA dans leurs applications web, mobiles ou cloud via des API simples et rapides.
+                                <strong className="text-green-400">Mars 2026 - Plateforme Vera Rubin</strong> : Nouvelle architecture dédiée à l’IA permettant de faire fonctionner des supercalculateurs encore plus puissants pour l’entraînement de modèles avancés.
                             </li>
                             <li>
-                                <strong className="text-green-400">5 juin 2025 - Omniverse Cloud API</strong> : L'ouverture des API Omniverse permet aux développeurs d'intégrer la 3D collaborative, les jumeaux numériques et la simulation dans des sites web ou des plateformes cloud.
+                                <strong className="text-green-400">Mars 2026 - Partenariats industriels</strong> : NVIDIA collabore avec de grandes entreprises pour intégrer l’IA dans l’industrie, notamment dans la conception, la simulation et la production automatisée.
                             </li>
                             <li>
-                                <strong className="text-green-400">6 juin 2025 - NVIDIA ACE for Games</strong> : API destinée aux développeurs de jeux ou d’applications interactives pour créer des personnages IA avec animation faciale, voix et dialogue généré en temps réel.
+                                <strong className="text-green-400">Mars 2026 - AI Factories</strong> : NVIDIA développe des infrastructures appelées "AI Factories" pour produire de la puissance de calcul à grande échelle tout en optimisant la consommation énergétique.
                             </li>
                             <li>
-                                <strong className="text-green-400">10 juin 2025 - CUDA X</strong> : Mise à jour majeure de CUDA avec de nouvelles librairies pour le calcul parallèle, l’optimisation IA et la programmation accélérée. Destiné aux développeurs IA, backend et calcul scientifique.
+                                <strong className="text-green-400">Mars 2026 - IA dans l’espace</strong> : L’entreprise travaille sur des solutions permettant d’exécuter de l’intelligence artificielle directement dans l’espace pour les satellites et l’analyse de données.
                             </li>
                             <li>
-                                <strong className="text-green-400">15 juin 2025 - AI Workbench</strong> : Lancement de AI Workbench, un environnement de développement IA connecté aux principaux IDE (VS Code notamment) pour construire, tester et déployer des modèles IA localement ou dans le cloud.
+                                <strong className="text-green-400">Février 2026 - Résultats financiers</strong> : NVIDIA annonce des résultats record, portés par la forte demande en IA et en data centers à l’échelle mondiale.
                             </li>
                         </ul>
                     </div>
