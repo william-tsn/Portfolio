@@ -70,7 +70,7 @@ const projects: Project[] = [
     title: "AP3 Clash of League front-end",
     description:
       "Partie front-end d'une application de gestion et communication pour les équipes de Clash of League, avec réservation de stades, planning, messagerie et gestion d'équipe. Réalisé en React.",
-    image: "/Portfolio/assets/clashofleague.webp",
+    image: "/Portfolio/assets/clash-frontend.png",
     github: "https://github.com/victorcb2003/ClashFrontEnd",
   },
   {
