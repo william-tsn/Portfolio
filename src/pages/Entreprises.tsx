@@ -29,7 +29,7 @@ function Entreprise() {
             </section>
 
             <section className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 py-20 gap-12">
-                <AnimatedComponent animationClass="animate-slide-in">
+                <AnimatedComponent animationClass="animate-slide-in"> ,  
                     <div className="md:w-1/2 space-y-6 text-left text-lg max-w-xl">
                         <p>
                             Durant mon stage, j'ai contribué à la maintenance et à l'évolution du site e-commerce de Dream Machine, basé sur la plateforme <span className="text-blue-600">Magento</span>, que j'ai installé en local pour mes développements.

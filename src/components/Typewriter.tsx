@@ -36,7 +36,7 @@ export default function NonEuclideanText({ parts }: { parts: Part[] }) {
           copy[i] = { ...copy[i], x: 0, y: 0, r: 0, settled: true };
           return copy;
         });
-      }, 300 + Math.random() * 2000);
+      }, 300 + Math.random() * 500);
     });
   }, [fullText]);
 
