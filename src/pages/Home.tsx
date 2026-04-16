@@ -3,7 +3,6 @@ import AnimatedComponent from "../components/AnimatedComponent";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import TypewriterGlitch from "../components/Typewriter";
 import Competences from "../components/Competences";
 
 function Accueil() {
@@ -15,23 +14,16 @@ function Accueil() {
         <h2 className="text-3xl md:text-4xl">
           Bienvenue sur mon portfolio
         </h2>
-        <div className="flex flex-col items-center gap-2 lg:flex-row lg:gap-4">
-          <TypewriterGlitch
-            parts={[
-              { text: "Je m'appelle", color: "white" },
-            ]}
-          />
+        <div className="flex flex-col items-center gap-2 lg:flex-row lg:gap-4 text-7xl">
+          <span className="text-white">Je m'appelle</span>
           <br className="block lg:hidden" />
-          <TypewriterGlitch
-            parts={[
-              { text: "William Tousson", color: "#a855f7" },
-            ]}
-          />
+          <span className="text-purple-400">William Tousson</span>
         </div>
         <div className="wave1 pointer-events-none" />
         <div className="wave2 pointer-events-none" />
         <div className="wave3 pointer-events-none" />
       </div>
+
       <section className="min-h-screen w-full flex flex-col items-center justify-center px-6 text-center py-20 space-y-10 bg-transparent">
         <AnimatedComponent animationClass="animate-slide-in-up">
           <h1 className="neon text-4xl mb-4">Qui suis-je</h1>
@@ -48,10 +40,12 @@ function Accueil() {
               href="/Portfolio/assets/tousson-william-cv.pdf"
               className="inline-block px-6 py-2 border-2 border-purple-400 text-purple-400 rounded-lg hover:bg-purple-400 hover:text-black transition mt-4"
             >
-              Mon cv</a>
+              Mon cv
+            </a>
           </div>
         </AnimatedComponent>
       </section>
+
       <section className="min-h-screen w-full flex flex-col items-center justify-center px-6 text-center py-20 space-y-10 bg-transparent">
         <AnimatedComponent animationClass="animate-slide-in-right">
           <h1 className="neon text-4xl mb-4">Parcours scolaire</h1>
@@ -73,6 +67,7 @@ function Accueil() {
           </div>
         </AnimatedComponent>
       </section>
+
       <section className="min-h-screen w-full flex flex-col items-center justify-center px-6 text-center py-20 space-y-10 bg-transparent">
         <AnimatedComponent animationClass="animate-slide-in-right">
           <h1 className="neon text-4xl mb-4">Ma formation</h1>
@@ -103,6 +98,7 @@ function Accueil() {
           </div>
         </AnimatedComponent>
       </section>
+
       <section className="min-h-screen w-full flex flex-col items-center justify-center px-6 text-center py-20 space-y-10 bg-transparent">
         <AnimatedComponent animationClass="animate-slide-in-up">
           <h1 className="neon text-4xl mb-4">Parcours professionnel</h1>
