@@ -17,7 +17,7 @@ const projects: Project[] = [
     description: "Un Pokédex interactif avec Tailwind/JS et une API Pokémon.",
     image: "/Portfolio/assets/pokedex.webp",
     github: "https://github.com/william-tsn/pokedex",
-    doc: "https://docs.google.com/document/d/xxx-pokedex",
+    doc: "/Portfolio/assets/docs/doc-pokedex.pdf",
   },
   {
     title: "book'ing api",
@@ -25,14 +25,14 @@ const projects: Project[] = [
       "Librairie avec moteur de recherche, comptes, Tailwind, JS, PHP et API Google.",
     image: "/Portfolio/assets/bookapi.webp",
     github: "https://github.com/william-tsn/book-api",
-    doc: "https://docs.google.com/document/d/xxx-drapeaux",
+    doc: "/Portfolio/assets/docs/doc-booking-api.pdf",
   },
   {
     title: "Portfolio",
     description: "Mon site portfolio réalisé en React et Tailwind CSS.",
     image: "/Portfolio/assets/portfolio.webp",
     github: "https://github.com/william-tsn/portfolio",
-    doc: "https://docs.google.com/document/d/xxx-portfolio",
+    doc: "/Portfolio/assets/docs/doc-portfolio.pdf",
   },
   {
     title: "Projet Citoyen",
@@ -41,6 +41,7 @@ const projects: Project[] = [
     image: "/Portfolio/assets/projetc.webp",
     github: "https://github.com/tony78rip/projetc",
     url: "https://tony78rip.github.io/projetc/",
+    doc: "/Portfolio/assets/docs/doc-projet-citoyen.pdf",
   },
   {
     title: "Shifumi",
@@ -48,7 +49,6 @@ const projects: Project[] = [
       "Jeu Pierre-Papier-Ciseaux en HTML, CSS et JS contre l'ordi avec score.",
     image: "/Portfolio/assets/shifumi.webp",
     github: "https://github.com/william-tsn/shifumi",
-    doc: "https://docs.google.com/document/d/xxx-shifumi",
   },
   {
     title: "AP1 Site vitrine Smarty",
@@ -57,6 +57,7 @@ const projects: Project[] = [
     image: "/Portfolio/assets/site-smarty.webp",
     github: "https://github.com/william-tsn/Site-vitrine-smarty",
     url: "https://william-tsn.github.io/Site-vitrine-smarty/index.html",
+    doc: "/Portfolio/assets/docs/doc-projet-smarty-ap1.pdf",
   },
   {
     title: "AP2 Clash of League",
@@ -64,21 +65,15 @@ const projects: Project[] = [
       "Application de gestion et communication pour les équipes de Clash of League, avec réservation de stades, planning, messagerie et gestion d'équipe.",
     image: "/Portfolio/assets/clashofleague.webp",
     github: "",
-    doc: "/Portfolio/assets/AP2.pdf",
+    doc: "/Portfolio/assets/docs/AP2.pdf",
   },
   {
-    title: "AP3 Clash of League front-end",
+    title: "AP3 Clash of League front-end et back-end",
     description:
-      "Partie front-end d'une application de gestion et communication pour les équipes de Clash of League, avec réservation de stades, planning, messagerie et gestion d'équipe. Réalisé en React.",
+      "Partie front-end et back-end d'une application de gestion et communication pour les équipes de Clash of League, avec réservation de stades, planning, messagerie et gestion d'équipe. Réalisé en React pour le front et Node.js pour le back.",
     image: "/Portfolio/assets/clash-frontend.png",
     github: "https://github.com/victorcb2003/ClashFrontEnd",
-  },
-  {
-    title: "AP3 Clash of League back-end",
-    description:
-      "Partie back-end d'une application de gestion et communication pour les équipes de Clash of League, avec réservation de stades, planning, messagerie et gestion d'équipe. Réalisé en Node.js.",
-    image: "/Portfolio/assets/clashofleague.webp",
-    github: "https://github.com/victorcb2003/ClashBackEnd",
+    doc: "/Portfolio/assets/docs/doc-projet-ap3-clash.pdf",
   },
   {
     title: "AP4 Clash of League mobile",
@@ -86,6 +81,7 @@ const projects: Project[] = [
       "Partie mobile d'une application de gestion et communication pour les équipes de Clash of League, avec réservation de stades, planning, messagerie et gestion d'équipe. Réalisé en React Native.",
     image: "/Portfolio/assets/clashofleague.webp",
     github: "https://github.com/victorcb2003/ClashMobile",
+    doc: "/Portfolio/assets/docs/doc-projet-ap4-mobile.pdf",
   },
 ];
 
