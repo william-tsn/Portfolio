@@ -64,17 +64,7 @@ function VeilleTechno() {
                 url: "https://www.frandroid.com/produits/nvidia",
             },
         },
-        {
-            icon: <Bell size={36} />,
-            titre: "Google Alertes",
-            desc: "J'ai configuré une alerte Google sur le mot-clé « nvidia » qui m'envoie quotidiennement par mail les nouvelles publications de presse mentionnant l'entreprise.",
-            capture: "/Portfolio/assets/veille/google-alerts.png",
-            dernier: {
-                titre: "NVIDIA : résultats record portés par l'IA et le marché technologique",
-                desc: "Article publié sur Le Revenu, média financier français spécialisé en bourse et placements. L'article analyse les résultats trimestriels exceptionnels de NVIDIA, qui ont battu des records historiques grâce à l'explosion de la demande en intelligence artificielle. Il examine également l'impact de ces résultats sur le cours de bourse (NASDAQ: NVDA) et les perspectives du marché technologique pour les mois à venir.",
-                url: "https://www.lerevenu.com/reussir-bourse/conseils-bourse/nvidia-resultats-record-ia-marche-technologique/",
-            },
-        },
+
         {
             icon: <Globe size={36} />,
             titre: "Site officiel — Newsroom",
@@ -194,8 +184,8 @@ function VeilleTechno() {
                         <div className="max-w-3xl text-left">
                             <ul className="space-y-4 text-base sm:text-lg list-disc list-inside">
                                 <li>
-                                    
-                                       <a href="https://blogs.nvidia.com/blog/vera-cpu-phoronix/"
+
+                                    <a href="https://blogs.nvidia.com/blog/vera-cpu-phoronix/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="hover:text-green-300 transition"
@@ -211,8 +201,8 @@ function VeilleTechno() {
                                     charge.
                                 </li>
                                 <li>
-                                    
-                                       <a href="https://blogs.nvidia.com/blog/nvidia-gtc-taipei-computex-2026-news/"
+
+                                    <a href="https://blogs.nvidia.com/blog/nvidia-gtc-taipei-computex-2026-news/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="hover:text-green-300 transition"
@@ -227,8 +217,8 @@ function VeilleTechno() {
                                     physique.
                                 </li>
                                 <li>
-                                    
-                                       <a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027"
+
+                                    <a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="hover:text-green-300 transition"
@@ -243,8 +233,8 @@ function VeilleTechno() {
                                     sur un an.
                                 </li>
                                 <li>
-                                    
-                                       <a href="https://blogs.nvidia.com/blog/google-cloud-developer-community-ai-builders/"
+
+                                    <a href="https://blogs.nvidia.com/blog/google-cloud-developer-community-ai-builders/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="hover:text-green-300 transition"
@@ -259,8 +249,8 @@ function VeilleTechno() {
                                     dédiés.
                                 </li>
                                 <li>
-                                    
-                                       <a href="https://blogs.nvidia.com/blog/vera-cpu-delivery/"
+
+                                    <a href="https://blogs.nvidia.com/blog/vera-cpu-delivery/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="hover:text-green-300 transition"
@@ -275,8 +265,8 @@ function VeilleTechno() {
                                     Oracle Cloud Infrastructure à Santa Clara.
                                 </li>
                                 <li>
-                                    
-                                       <a href="https://blogs.nvidia.com/blog/your-career-starts-at-the-beginning-of-the-ai-revolution-nvidia-ceo-tells-graduates/"
+
+                                    <a href="https://blogs.nvidia.com/blog/your-career-starts-at-the-beginning-of-the-ai-revolution-nvidia-ceo-tells-graduates/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="hover:text-green-300 transition"
@@ -292,8 +282,8 @@ function VeilleTechno() {
                                     révolution de l'IA.
                                 </li>
                                 <li>
-                                    
-                                       <a href="https://nvidianews.nvidia.com/news/nvidia-names-suzanne-nora-johnson-to-board-of-directors"
+
+                                    <a href="https://nvidianews.nvidia.com/news/nvidia-names-suzanne-nora-johnson-to-board-of-directors"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="hover:text-green-300 transition"
@@ -307,8 +297,8 @@ function VeilleTechno() {
                                     juillet 2026.
                                 </li>
                                 <li>
-                                    
-                                       <a href="https://nvidianews.nvidia.com/news/nvidia-and-iren-announce-strategic-partnership-to-accelerate-deployment-of-up-to-5-gigawatts-of-ai-infrastructure"
+
+                                    <a href="https://nvidianews.nvidia.com/news/nvidia-and-iren-announce-strategic-partnership-to-accelerate-deployment-of-up-to-5-gigawatts-of-ai-infrastructure"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="hover:text-green-300 transition"
@@ -322,8 +312,8 @@ function VeilleTechno() {
                                     d'infrastructures d'IA de nouvelle génération.
                                 </li>
                                 <li>
-                                    
-                                       <a href="https://nvidianews.nvidia.com/news/nvidia-and-corning-announce-long-term-partnership-to-strengthen-us-manufacturing-for-ai-infrastructure"
+
+                                    <a href="https://nvidianews.nvidia.com/news/nvidia-and-corning-announce-long-term-partnership-to-strengthen-us-manufacturing-for-ai-infrastructure"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="hover:text-green-300 transition"
@@ -338,8 +328,8 @@ function VeilleTechno() {
                                     IA.
                                 </li>
                                 <li>
-                                    
-                                       <a href="https://blogs.nvidia.com/blog/nemotron-3-nano-omni-multimodal-ai-agents/"
+
+                                    <a href="https://blogs.nvidia.com/blog/nemotron-3-nano-omni-multimodal-ai-agents/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="hover:text-green-300 transition"
@@ -385,8 +375,8 @@ function VeilleTechno() {
                             <p className="text-base mb-4">
                                 Cliquez ci-dessous pour voir la présentation :
                             </p>
-                            
-                               <a href="https://docs.google.com/presentation/d/e/2PACX-1vRR341tq2ABSgaPpeYyMBjE1jpd2VyMZA-7QO_pEwi-wGKZqZESHtAz4H1IKySlNeV4z9At40ATzwoV/pub?start=true&loop=true&delayms=10000"
+
+                            <a href="https://docs.google.com/presentation/d/e/2PACX-1vRR341tq2ABSgaPpeYyMBjE1jpd2VyMZA-7QO_pEwi-wGKZqZESHtAz4H1IKySlNeV4z9At40ATzwoV/pub?start=true&loop=true&delayms=10000"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-green-400 underline hover:text-green-300 transition"
@@ -408,8 +398,8 @@ function VeilleTechno() {
                         <p className="text-base sm:text-lg">
                             Pour plus d'informations, visitez le site officiel de Nvidia :
                             <br />
-                            
-                                <a href="https://nvidianews.nvidia.com/news/latest"
+
+                            <a href="https://nvidianews.nvidia.com/news/latest"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-green-400 underline hover:text-green-300 transition"
@@ -458,8 +448,8 @@ function VeilleTechno() {
                             <p className="text-xs text-green-400 font-semibold uppercase tracking-wider mb-1">
                                 Dernier consulté
                             </p>
-                            
-                               <a href={selectedSource.dernier.url}
+
+                            <a href={selectedSource.dernier.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-sm font-semibold text-gray-100 hover:text-green-400 underline transition block mb-2"
