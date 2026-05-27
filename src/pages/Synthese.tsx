@@ -13,7 +13,7 @@ function TableauSynthese() {
                 ` }</style>
 
             <div className="tableau-bg relative w-full min-h-screen overflow-x-hidden font-ubuntu text-white">
-                <div className="absolute inset-0 z-10 pointer-events-none">
+                <div className="absolute inset-0 z-30 pointer-events-none">
                     <div className="wave25" />
                     <div className="wave26" />
                     <div className="wave27" />
