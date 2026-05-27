@@ -32,7 +32,7 @@ function Competences() {
   return (
     <section
       id="competences"
-      className="min-h-screen w-full bg-transparent text-white px-4 sm:px-6 lg:px-16 text-center flex flex-col pt-20"
+      className="min-h-screen w-full bg-transparent text-white px-4 sm:px-6 lg:px-16 text-center flex flex-col pt-20 pb-20"
     >
       <div className="flex-grow flex flex-col justify-center items-center">
         <AnimatedComponent animationClass="animate-slide-in-up"><h1 className="neon text-4xl text-center mb-10">Mes compétences</h1></AnimatedComponent>

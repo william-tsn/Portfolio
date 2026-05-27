@@ -1,8 +1,5 @@
 import Navbar from "../components/Navbar";
 import AnimatedComponent from "../components/AnimatedComponent";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Competences from "../components/Competences";
 
 function Accueil() {
@@ -19,7 +16,6 @@ function Accueil() {
       <div className="accueil-bg font-ubuntu w-full min-h-screen overflow-x-hidden text-white">
         <Navbar />
 
-        {/* Hero */}
         <div className="flex flex-col items-center justify-center min-h-screen px-4 text-center space-y-8 sm:space-y-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl">
             Bienvenue sur mon portfolio
@@ -34,7 +30,6 @@ function Accueil() {
           <div className="wave3 pointer-events-none" />
         </div>
 
-        {/* Qui suis-je */}
         <section className="w-full flex flex-col items-center justify-center px-4 sm:px-6 text-center py-16 sm:py-20 space-y-8 sm:space-y-10 bg-transparent">
           <AnimatedComponent animationClass="animate-slide-in-up">
             <h1 className="neon text-3xl sm:text-4xl mb-4">Qui suis-je</h1>
@@ -57,7 +52,6 @@ function Accueil() {
           </AnimatedComponent>
         </section>
 
-        {/* Parcours scolaire */}
         <section className="w-full flex flex-col items-center justify-center px-4 sm:px-6 text-center py-16 sm:py-20 space-y-8 sm:space-y-10 bg-transparent">
           <AnimatedComponent animationClass="animate-slide-in-right">
             <h1 className="neon text-3xl sm:text-4xl mb-4">Parcours scolaire</h1>
@@ -80,7 +74,6 @@ function Accueil() {
           </AnimatedComponent>
         </section>
 
-        {/* Ma formation */}
         <section className="w-full flex flex-col items-center justify-center px-4 sm:px-6 text-center py-16 sm:py-20 space-y-8 sm:space-y-10 bg-transparent">
           <AnimatedComponent animationClass="animate-slide-in-right">
             <h1 className="neon text-3xl sm:text-4xl mb-4">Ma formation</h1>
@@ -111,8 +104,6 @@ function Accueil() {
             </div>
           </AnimatedComponent>
         </section>
-
-        {/* Parcours professionnel */}
         <section className="w-full flex flex-col items-center justify-center px-4 sm:px-6 text-center py-16 sm:py-20 space-y-8 sm:space-y-10 bg-transparent">
           <AnimatedComponent animationClass="animate-slide-in-up">
             <h1 className="neon text-3xl sm:text-4xl mb-4">Parcours professionnel</h1>
@@ -148,29 +139,6 @@ function Accueil() {
         </section>
 
         <Competences />
-
-        {/* Me contacter */}
-        <section className="w-full flex flex-col items-center justify-center px-4 sm:px-6 text-center pt-16 sm:pt-20 pb-48 sm:pb-64 space-y-8 sm:space-y-10 bg-transparent">
-          <AnimatedComponent animationClass="animate-slide-in-up">
-            <h1 className="neon text-3xl sm:text-4xl">Me contacter</h1>
-            <div className="space-y-5 sm:space-y-6 pt-4 sm:pt-6">
-              <h2 className="text-xl sm:text-2xl hover:text-violet-400 cursor-pointer">
-                <FontAwesomeIcon icon={faPhone} className="mr-2" />
-                <a href="tel:0769058970">07 69 05 89 70</a>
-              </h2>
-              <h2 className="text-xl sm:text-2xl hover:text-violet-400 cursor-pointer">
-                <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
-                <a href="mailto:william.tousson@gmail.com">william.tousson@gmail.com</a>
-              </h2>
-              <h2 className="text-xl sm:text-2xl hover:text-violet-400 cursor-pointer">
-                <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
-                <a href="https://www.linkedin.com/in/william-tousson-a122b033a/" target="_blank" rel="noopener noreferrer">
-                  LinkedIn
-                </a>
-              </h2>
-            </div>
-          </AnimatedComponent>
-        </section>
 
         <div className="wave4 pointer-events-none" />
         <div className="wave5 pointer-events-none" />
