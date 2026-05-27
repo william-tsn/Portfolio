@@ -62,7 +62,7 @@ const projects: Project[] = [
   {
     title: "AP2 Clash of League",
     description:
-      "Application de gestion et communication pour les équipes de Clash of League, avec réservation de stades, planning, messagerie et gestion d'équipe.",
+      "Application de gestion et communication pour les équipes de Clash of League, avec réservation de stades, planning et gestion d'équipe.",
     image: "/Portfolio/assets/clashofleague.webp",
     github: "",
     doc: "/Portfolio/assets/docs/AP2.pdf",
@@ -70,7 +70,7 @@ const projects: Project[] = [
   {
     title: "AP3 Clash of League front-end et back-end",
     description:
-      "Partie front-end et back-end d'une application de gestion et communication pour les équipes de Clash of League, avec réservation de stades, planning, messagerie et gestion d'équipe. Réalisé en React pour le front et Node.js pour le back.",
+      "Partie front-end et back-end d'une application de gestion et communication pour les équipes de Clash of League, avec réservation de stades, planning et gestion d'équipe. Réalisé en React pour le front et Node.js pour le back.",
     image: "/Portfolio/assets/clash-frontend.png",
     github: "https://github.com/victorcb2003/ClashFrontEnd",
     doc: "/Portfolio/assets/docs/doc-projet-ap3-clash.pdf",
@@ -78,7 +78,7 @@ const projects: Project[] = [
   {
     title: "AP4 Clash of League mobile",
     description:
-      "Partie mobile d'une application de gestion et communication pour les équipes de Clash of League, avec réservation de stades, planning, messagerie et gestion d'équipe. Réalisé en React Native.",
+      "Partie mobile d'une application de gestion et communication pour les équipes de Clash of League, avec réservation de stades, planning et gestion d'équipe. Réalisé en React Native.",
     image: "/Portfolio/assets/clashofleague.webp",
     github: "https://github.com/victorcb2003/ClashMobile",
     doc: "/Portfolio/assets/docs/doc-projet-ap4-mobile.pdf",
