@@ -60,7 +60,7 @@ function TableauSynthese() {
                             Ouvrir en plein écran
                         </a>
 
-                        <a href="/Portfolio/assets/tableau-synthese.pdf"
+                        <a href="/Portfolio/assets/william_tousson_tableau.pdf"
                             download
                             className="px-6 py-2 bg-transparent border border-red-500 hover:bg-red-700 rounded text-white transition"
                         >
