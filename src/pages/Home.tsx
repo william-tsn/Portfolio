@@ -35,7 +35,7 @@ function Accueil() {
             <h1 className="neon text-3xl sm:text-4xl mb-4">Qui suis-je</h1>
             <div className="max-w-2xl space-y-5 sm:space-y-6">
               <p className="text-base sm:text-lg leading-relaxed">
-                Bonjour, je m'appelle <strong>William Tousson</strong>, j'ai 19 ans.
+                Bonjour, je m'appelle <strong>William Tousson</strong>, j'ai 20 ans.
                 Après un <strong className="text-purple-400">Bac Pro MELEC</strong>, j'ai choisi de me spécialiser dans l'informatique
                 en intégrant un <strong className="text-purple-400">BTS SIO</strong> avec l'option SLAM pour me former au développement de logiciels et d'applications.
               </p>
